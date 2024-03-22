@@ -20,6 +20,10 @@
 		EA20ADA42B86467600F6D33D /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA20ADA32B86467600F6D33D /* SettingsStoryboard.storyboard */; };
 		EA20ADA62B8646B400F6D33D /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20ADA52B8646B400F6D33D /* SettingsPresenter.swift */; };
 		EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20ADA72B86476900F6D33D /* SettingsModuleBuilder.swift */; };
+		EA3FBDBC2BAD8BEC00D17230 /* WhiteBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBB2BAD8BEC00D17230 /* WhiteBorderButton.swift */; };
+		EA3FBDBE2BAD927A00D17230 /* SettingsContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */; };
+		EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */; };
+		EA3FBDC32BAD985100D17230 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		EA20ADA32B86467600F6D33D /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		EA20ADA52B8646B400F6D33D /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		EA20ADA72B86476900F6D33D /* SettingsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModuleBuilder.swift; sourceTree = "<group>"; };
+		EA3FBDBB2BAD8BEC00D17230 /* WhiteBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBorderButton.swift; sourceTree = "<group>"; };
+		EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContentModel.swift; sourceTree = "<group>"; };
+		EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 			children = (
 				EA20AD802B863A5300F6D33D /* AppDelegate.swift */,
 				EA20AD822B863A5300F6D33D /* SceneDelegate.swift */,
+				EA3FBDBA2BAD8BC000D17230 /* UI */,
 				EA20AD942B863DE500F6D33D /* Tabbar */,
 				EA20ADA02B8645B400F6D33D /* Settings */,
 				EA20AD972B863F5A00F6D33D /* Weight */,
@@ -105,11 +114,30 @@
 			isa = PBXGroup;
 			children = (
 				EA20ADA72B86476900F6D33D /* SettingsModuleBuilder.swift */,
+				EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */,
 				EA20ADA52B8646B400F6D33D /* SettingsPresenter.swift */,
 				EA20ADA12B8645E100F6D33D /* SettingsViewController.swift */,
 				EA20ADA32B86467600F6D33D /* SettingsStoryboard.storyboard */,
+				EA3FBDBF2BAD982100D17230 /* SettingsTableViewCell */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		EA3FBDBA2BAD8BC000D17230 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EA3FBDBB2BAD8BEC00D17230 /* WhiteBorderButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EA3FBDBF2BAD982100D17230 /* SettingsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */,
+				EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */,
+			);
+			path = SettingsTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +201,7 @@
 				EA20AD9F2B8641EE00F6D33D /* WeightStoryboard.storyboard in Resources */,
 				EA20AD8D2B863A5600F6D33D /* LaunchScreen.storyboard in Resources */,
 				EA20ADA42B86467600F6D33D /* SettingsStoryboard.storyboard in Resources */,
+				EA3FBDC32BAD985100D17230 /* SettingsTableViewCell.xib in Resources */,
 				EA20AD8A2B863A5600F6D33D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +214,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA20AD9B2B86407600F6D33D /* WeightPresenter.swift in Sources */,
+				EA3FBDBC2BAD8BEC00D17230 /* WhiteBorderButton.swift in Sources */,
+				EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */,
+				EA3FBDBE2BAD927A00D17230 /* SettingsContentModel.swift in Sources */,
 				EA20AD992B863FBA00F6D33D /* WeightViewController.swift in Sources */,
 				EA20ADA22B8645E100F6D33D /* SettingsViewController.swift in Sources */,
 				EA20ADA62B8646B400F6D33D /* SettingsPresenter.swift in Sources */,

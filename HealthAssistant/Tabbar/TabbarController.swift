@@ -44,6 +44,8 @@ private extension TabbarController {
         self.customTabBarView.frame = tabBar.frame
         self.customTabBarView.backgroundColor = .white
         self.customTabBarView.layer.masksToBounds = false
+        self.customTabBarView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        self.customTabBarView.layer.cornerRadius = 20
         self.view.addSubview(customTabBarView)
         self.view.bringSubviewToFront(self.tabBar)
                
