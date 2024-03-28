@@ -8,11 +8,13 @@
 import Foundation
 import UIKit
 
-protocol  : AnyObject {
+protocol ISignInViewController: AnyObject {
     
 }
 
 final class SignInViewController: UIViewController {
+    var presenter: ISignInPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()

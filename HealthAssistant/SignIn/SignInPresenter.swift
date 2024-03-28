@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+protocol ISignInPresenter {
+    
+}
+
+final class SignInPresenter: ISignInPresenter {
+    private unowned var viewController: ISignInViewController
+    
+    init(viewController: ISignInViewController) {
+        self.viewController = viewController
+    }
+    
+}
