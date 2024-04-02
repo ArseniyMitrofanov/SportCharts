@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol ISplashViewController: AnyObject {
-    
+    func presentSignIn()
 }
 
 final class SplashViewController: UIViewController {
@@ -18,10 +18,16 @@ final class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.presenter?.viewDidLoad()
     }
 }
 
 extension SplashViewController: ISplashViewController {
+    func presentSignIn() {
+        let viewController = SignInModuleBuilder.setupModule()
+        self.navigationController?.viewControllers = [viewController]
+    }
+    
     
 }
 

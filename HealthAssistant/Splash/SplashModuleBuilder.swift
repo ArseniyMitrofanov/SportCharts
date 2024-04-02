@@ -10,7 +10,7 @@ import UIKit
 
 enum SplashModuleBuilder {
     static func setupModule() -> SplashViewController {
-        guard let viewController = UIStoryboard(name: "SplashViewController", bundle: nil)
+        guard let viewController = UIStoryboard(name: "SplashStoryboard", bundle: nil)
             .instantiateViewController(withIdentifier: "SplashViewController") as? SplashViewController else {
             print("ERROR: failed to instantiate SplashViewController")
             return SplashViewController()

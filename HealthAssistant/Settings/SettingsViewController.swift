@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol ISettingsViewController: AnyObject {
-    
+    func showSignInScreen()
 }
 
 final class SettingsViewController: UIViewController {
@@ -44,6 +44,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension SettingsViewController: ISettingsViewController {
+    func showSignInScreen() {
+        self.navigationController?.viewControllers = [SignInModuleBuilder.setupModule()]
+    }
+    
     
 }
 

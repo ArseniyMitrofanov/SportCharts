@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var navigationController = UINavigationController(rootViewController: TabbarController())
+    var navigationController = UINavigationController(rootViewController: SplashModuleBuilder.setupModule())
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        

@@ -24,6 +24,19 @@ final class SettingsPresenter: ISettingsPresenter {
     }
     
     func didSelectCell(at indexPath: IndexPath) {
-        print(indexPath.row)
+        switch indexPath.row {
+        case 0: print("0")
+        case 1: print("1")
+        case 2: print("2")
+        case 3: self.signOut()
+        default: print("error: index out of range")
+            self.signOut()
+        }
+    }
+}
+
+private extension SettingsPresenter {
+    func signOut() {
+        self.viewController.showSignInScreen()
     }
 }

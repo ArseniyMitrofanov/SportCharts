@@ -27,5 +27,6 @@ final class WhiteBorderButton: UIButton {
         self.clipsToBounds = true
         self.layer.masksToBounds = true
         self.setTitleColor(.white, for: .normal)
+        self.setTitleColor(UIColor(white: 0.9, alpha: 0.5), for: .highlighted)
     }
 }

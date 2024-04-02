@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ISplashPresenter {
-    
+    func viewDidLoad()
 }
 
 final class SplashPresenter: ISplashPresenter {
@@ -17,4 +17,15 @@ final class SplashPresenter: ISplashPresenter {
     init(viewController: ISplashViewController) {
         self.viewController = viewController
     }
+    
+    func viewDidLoad() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute:  { [weak self] in
+            guard let self = self else {return}
+            self.viewController.presentSignIn()
+        })
+    }
+}
+
+private extension SplashPresenter {
+    
 }
