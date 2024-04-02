@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 protocol ISignInViewController: AnyObject {
-    
+    func showCreateAccountScreen()
+    func showTabbar()
 }
 
 final class SignInViewController: UIViewController {
@@ -19,10 +20,22 @@ final class SignInViewController: UIViewController {
         super.viewDidLoad()
         self.setupUI()
     }
+    @IBAction func signInButtonTouchUpInside(_ sender: Any) {
+        self.presenter?.signInButtonTouchUpInside()
+    }
+    @IBAction func createAccountTouchUpInside(_ sender: Any) {
+        self.presenter?.createAccountTouchUpInside()
+    }
 }
 
 extension SignInViewController: ISignInViewController {
+    func showCreateAccountScreen() {
+        self.navigationController?.viewControllers = [SplashModuleBuilder.setupModule()]
+    }
     
+    func showTabbar() {
+        self.navigationController?.viewControllers = [TabbarController()]
+    }
 }
 
 private extension SignInViewController {

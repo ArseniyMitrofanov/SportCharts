@@ -10,7 +10,7 @@ import UIKit
 
 enum SignInModuleBuilder {
     static func setupModule() -> SignInViewController {
-        guard let viewController = UIStoryboard(name: "SignInViewController", bundle: nil)
+        guard let viewController = UIStoryboard(name: "SignInStoryboard", bundle: nil)
             .instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else {
             print("ERROR: failed to instantiate SignInViewController")
             return SignInViewController()

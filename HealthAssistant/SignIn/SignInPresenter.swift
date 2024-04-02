@@ -8,7 +8,8 @@
 import Foundation
 
 protocol ISignInPresenter {
-    
+    func signInButtonTouchUpInside()
+    func createAccountTouchUpInside()
 }
 
 final class SignInPresenter: ISignInPresenter {
@@ -16,6 +17,14 @@ final class SignInPresenter: ISignInPresenter {
     
     init(viewController: ISignInViewController) {
         self.viewController = viewController
+    }
+    
+    func signInButtonTouchUpInside() {
+        self.viewController.showTabbar()
+    }
+    
+    func createAccountTouchUpInside() {
+        self.viewController.showCreateAccountScreen()
     }
     
 }

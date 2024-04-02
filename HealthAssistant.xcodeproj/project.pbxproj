@@ -95,9 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				EA20AD802B863A5300F6D33D /* AppDelegate.swift */,
+				EA20AD822B863A5300F6D33D /* SceneDelegate.swift */,
 				EAA8D1EE2BB5BC210098B015 /* Splash */,
 				EAA8D1E52BB5B6680098B015 /* SignIn */,
-				EA20AD822B863A5300F6D33D /* SceneDelegate.swift */,
 				EA20AD942B863DE500F6D33D /* Tabbar */,
 				EA20ADA02B8645B400F6D33D /* Settings */,
 				EA20AD972B863F5A00F6D33D /* Weight */,
