@@ -24,6 +24,10 @@
 		EA3FBDBE2BAD927A00D17230 /* SettingsContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */; };
 		EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */; };
 		EA3FBDC32BAD985100D17230 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */; };
+		EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */; };
+		EAA847802BBDD57E0059E281 /* CreateAccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */; };
+		EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */; };
+		EAA847842BBDD8A70059E281 /* CreateAccountModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA847832BBDD8A60059E281 /* CreateAccountModuleBuilder.swift */; };
 		EAA8D1E72BB5B6810098B015 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8D1E62BB5B6810098B015 /* SignInViewController.swift */; };
 		EAA8D1E92BB5B80D0098B015 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8D1E82BB5B80D0098B015 /* SignInPresenter.swift */; };
 		EAA8D1EB2BB5B8AA0098B015 /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA8D1EA2BB5B8AA0098B015 /* SignInStoryboard.storyboard */; };
@@ -54,6 +58,10 @@
 		EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContentModel.swift; sourceTree = "<group>"; };
 		EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccountStoryboard.storyboard; sourceTree = "<group>"; };
+		EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
+		EAA847832BBDD8A60059E281 /* CreateAccountModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountModuleBuilder.swift; sourceTree = "<group>"; };
 		EAA8D1E62BB5B6810098B015 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EAA8D1E82BB5B80D0098B015 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		EAA8D1EA2BB5B8AA0098B015 /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 				EA20AD822B863A5300F6D33D /* SceneDelegate.swift */,
 				EAA8D1EE2BB5BC210098B015 /* Splash */,
 				EAA8D1E52BB5B6680098B015 /* SignIn */,
+				EAA8477C2BBDD4D00059E281 /* CreateAccount */,
 				EA20AD942B863DE500F6D33D /* Tabbar */,
 				EA20ADA02B8645B400F6D33D /* Settings */,
 				EA20AD972B863F5A00F6D33D /* Weight */,
@@ -156,6 +165,17 @@
 				EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */,
 			);
 			path = SettingsTableViewCell;
+			sourceTree = "<group>";
+		};
+		EAA8477C2BBDD4D00059E281 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				EAA847832BBDD8A60059E281 /* CreateAccountModuleBuilder.swift */,
+				EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */,
+				EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */,
+				EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */,
+			);
+			path = CreateAccount;
 			sourceTree = "<group>";
 		};
 		EAA8D1E52BB5B6680098B015 /* SignIn */ = {
@@ -245,6 +265,7 @@
 				EAA8D1F22BB5BCB00098B015 /* SplashStoryboard.storyboard in Resources */,
 				EAA8D1EB2BB5B8AA0098B015 /* SignInStoryboard.storyboard in Resources */,
 				EA20AD8A2B863A5600F6D33D /* Assets.xcassets in Resources */,
+				EAA847802BBDD57E0059E281 /* CreateAccountStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +284,12 @@
 				EA20AD992B863FBA00F6D33D /* WeightViewController.swift in Sources */,
 				EAA8D1F42BB5BCDE0098B015 /* SplashPresener.swift in Sources */,
 				EA20ADA22B8645E100F6D33D /* SettingsViewController.swift in Sources */,
+				EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */,
 				EA20ADA62B8646B400F6D33D /* SettingsPresenter.swift in Sources */,
 				EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */,
 				EA20AD812B863A5300F6D33D /* AppDelegate.swift in Sources */,
+				EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */,
+				EAA847842BBDD8A70059E281 /* CreateAccountModuleBuilder.swift in Sources */,
 				EAA8D1ED2BB5B8FD0098B015 /* SignInModuleBuilder.swift in Sources */,
 				EA20AD962B863E0E00F6D33D /* TabbarController.swift in Sources */,
 				EAA8D1E72BB5B6810098B015 /* SignInViewController.swift in Sources */,

@@ -30,7 +30,7 @@ final class SignInViewController: UIViewController {
 
 extension SignInViewController: ISignInViewController {
     func showCreateAccountScreen() {
-        self.navigationController?.viewControllers = [SplashModuleBuilder.setupModule()]
+        self.navigationController?.pushViewController(CreateAccountModuleBuilder.setupModule(), animated: true)
     }
     
     func showTabbar() {

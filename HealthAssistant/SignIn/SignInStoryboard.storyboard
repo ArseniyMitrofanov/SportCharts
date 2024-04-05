@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bD8-Gq-TXS">
-                                <rect key="frame" x="50" y="166" width="293" height="220"/>
+                                <rect key="frame" x="50" y="159" width="293" height="220"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-9T-1ym">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="40"/>
@@ -90,7 +90,7 @@
                         <constraints>
                             <constraint firstItem="bD8-Gq-TXS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="SCI-DW-ST0"/>
                             <constraint firstItem="bD8-Gq-TXS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="SZ5-md-2me"/>
-                            <constraint firstItem="bD8-Gq-TXS" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-150" id="Sl4-jC-mLj"/>
+                            <constraint firstItem="bD8-Gq-TXS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="jf6-hJ-otQ"/>
                             <constraint firstAttribute="trailing" secondItem="bD8-Gq-TXS" secondAttribute="trailing" constant="50" id="qMJ-Lb-B7c"/>
                         </constraints>
                     </view>
