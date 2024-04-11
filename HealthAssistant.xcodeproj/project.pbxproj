@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA0B322A2BC848E400723D1E /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B32292BC848E400723D1E /* CreateAccountRequest.swift */; };
+		EA0B322A2BC848E400723D1E /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B32292BC848E400723D1E /* AuthorizationRequest.swift */; };
+		EA0B322E2BC856FB00723D1E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B322D2BC856FB00723D1E /* UIViewControllerExtension.swift */; };
+		EA0B32302BC857BA00723D1E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B322F2BC857BA00723D1E /* Validator.swift */; };
 		EA20AD812B863A5300F6D33D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20AD802B863A5300F6D33D /* AppDelegate.swift */; };
 		EA20AD832B863A5300F6D33D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20AD822B863A5300F6D33D /* SceneDelegate.swift */; };
 		EA20AD8A2B863A5600F6D33D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA20AD892B863A5600F6D33D /* Assets.xcassets */; };
@@ -40,7 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA0B32292BC848E400723D1E /* CreateAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRequest.swift; sourceTree = "<group>"; };
+		EA0B32292BC848E400723D1E /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
+		EA0B322D2BC856FB00723D1E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		EA0B322F2BC857BA00723D1E /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		EA20AD7D2B863A5300F6D33D /* HealthAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA20AD802B863A5300F6D33D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA20AD822B863A5300F6D33D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA0B322B2BC8569E00723D1E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA0B322F2BC857BA00723D1E /* Validator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA0B322C2BC856CB00723D1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA0B322D2BC856FB00723D1E /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EA20AD742B863A5300F6D33D = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +133,7 @@
 				EA20ADA02B8645B400F6D33D /* Settings */,
 				EA20AD972B863F5A00F6D33D /* Weight */,
 				EA3FBDBA2BAD8BC000D17230 /* UI */,
+				EA0B322B2BC8569E00723D1E /* Helpers */,
 				EA20AD892B863A5600F6D33D /* Assets.xcassets */,
 				EA20AD8B2B863A5600F6D33D /* LaunchScreen.storyboard */,
 				EA20AD8E2B863A5600F6D33D /* Info.plist */,
@@ -156,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3FBDBB2BAD8BEC00D17230 /* WhiteBorderButton.swift */,
+				EA0B322C2BC856CB00723D1E /* Extensions */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -173,10 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				EAA847832BBDD8A60059E281 /* CreateAccountModuleBuilder.swift */,
+				EA0B32292BC848E400723D1E /* AuthorizationRequest.swift */,
 				EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */,
 				EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */,
 				EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */,
-				EA0B32292BC848E400723D1E /* CreateAccountRequest.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -286,6 +308,7 @@
 				EAA8D1E92BB5B80D0098B015 /* SignInPresenter.swift in Sources */,
 				EA20AD992B863FBA00F6D33D /* WeightViewController.swift in Sources */,
 				EAA8D1F42BB5BCDE0098B015 /* SplashPresener.swift in Sources */,
+				EA0B322E2BC856FB00723D1E /* UIViewControllerExtension.swift in Sources */,
 				EA20ADA22B8645E100F6D33D /* SettingsViewController.swift in Sources */,
 				EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */,
 				EA20ADA62B8646B400F6D33D /* SettingsPresenter.swift in Sources */,
@@ -294,11 +317,12 @@
 				EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */,
 				EAA847842BBDD8A70059E281 /* CreateAccountModuleBuilder.swift in Sources */,
 				EAA8D1ED2BB5B8FD0098B015 /* SignInModuleBuilder.swift in Sources */,
+				EA0B32302BC857BA00723D1E /* Validator.swift in Sources */,
 				EA20AD962B863E0E00F6D33D /* TabbarController.swift in Sources */,
 				EAA8D1E72BB5B6810098B015 /* SignInViewController.swift in Sources */,
 				EAA8D1F62BB5BDB20098B015 /* SplashModuleBuilder.swift in Sources */,
 				EA20AD832B863A5300F6D33D /* SceneDelegate.swift in Sources */,
-				EA0B322A2BC848E400723D1E /* CreateAccountRequest.swift in Sources */,
+				EA0B322A2BC848E400723D1E /* AuthorizationRequest.swift in Sources */,
 				EA20AD9D2B86414F00F6D33D /* WeightModuleBuilder.swift in Sources */,
 				EAA8D1F02BB5BC470098B015 /* SplashViewController.swift in Sources */,
 			);

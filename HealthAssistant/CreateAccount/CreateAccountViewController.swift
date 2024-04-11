@@ -14,6 +14,7 @@ protocol ICreateAccountViewController: AnyObject {
     func emailText() -> String?
     func passwordText() -> String?
     func repeatPasswordText() -> String?
+    func showAlert(title: String, message: String)
 }
 
 final class CreateAccountViewController: UIViewController {
@@ -40,6 +41,10 @@ final class CreateAccountViewController: UIViewController {
 }
 
 extension CreateAccountViewController: ICreateAccountViewController {
+    func showAlert(title: String, message: String) {
+        self.presentNativeAlert(title: title, message: message)
+    }
+    
     func endEditing() {
         self.view.endEditing(true)
     }

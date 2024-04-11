@@ -25,15 +25,26 @@ final class CreateAccountPresenter: ICreateAccountPresenter {
 
     func createButtonTouchUpInside() {
         self.viewController.endEditing()
-        
-        if let email = viewController.emailText(),
-           let password = viewController.passwordText(),
-           let repeatPassword = viewController.repeatPasswordText(),
-           password == repeatPassword {
-            let request = AuthorizationRequest(email: email, password: password)
-            self.sendCreateAccountRequest(request: request)
+        let emailText = self.viewController.emailText()
+        if Validator.email(from: emailText) {
+            let passwordText = self.viewController.passwordText()
+            if Validator.password(from: passwordText) {
+                let repeatPasswordText = self.viewController.repeatPasswordText()
+                if Validator.password(from: repeatPasswordText) {
+                    if passwordText == repeatPasswordText {
+                        let request = AuthorizationRequest(email: emailText!, password: passwordText!)
+                        self.sendCreateAccountRequest(request: request)
+                    }else {
+                        self.viewController.showAlert(title: "Пароли не совпадают", message: "")
+                    }
+                }else {
+                    self.viewController.showAlert(title: "Неверно заполнено поле повтора пароля", message: "Пароль может содержать только латинские буквы, цифры и специальные символы")
+                }
+            }else {
+                self.viewController.showAlert(title: "Неверно заполнено поле пароль", message: "Пароль может содержать только латинские буквы, цифры и специальные символы")
+            }
         }else {
-            print("smth")
+            self.viewController.showAlert(title: "Неверно заполнено поле email", message: "")
         }
     }
 }
