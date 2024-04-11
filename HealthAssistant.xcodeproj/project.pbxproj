@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA0B322A2BC848E400723D1E /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0B32292BC848E400723D1E /* CreateAccountRequest.swift */; };
 		EA20AD812B863A5300F6D33D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20AD802B863A5300F6D33D /* AppDelegate.swift */; };
 		EA20AD832B863A5300F6D33D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20AD822B863A5300F6D33D /* SceneDelegate.swift */; };
 		EA20AD8A2B863A5600F6D33D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA20AD892B863A5600F6D33D /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA0B32292BC848E400723D1E /* CreateAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRequest.swift; sourceTree = "<group>"; };
 		EA20AD7D2B863A5300F6D33D /* HealthAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA20AD802B863A5300F6D33D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA20AD822B863A5300F6D33D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */,
 				EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */,
 				EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */,
+				EA0B32292BC848E400723D1E /* CreateAccountRequest.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				EAA8D1E72BB5B6810098B015 /* SignInViewController.swift in Sources */,
 				EAA8D1F62BB5BDB20098B015 /* SplashModuleBuilder.swift in Sources */,
 				EA20AD832B863A5300F6D33D /* SceneDelegate.swift in Sources */,
+				EA0B322A2BC848E400723D1E /* CreateAccountRequest.swift in Sources */,
 				EA20AD9D2B86414F00F6D33D /* WeightModuleBuilder.swift in Sources */,
 				EAA8D1F02BB5BC470098B015 /* SplashViewController.swift in Sources */,
 			);

@@ -9,6 +9,7 @@ import Foundation
 
 protocol ICreateAccountPresenter {
     func backButtonTouchupInside()
+    func createButtonTouchUpInside()
 }
 
 final class CreateAccountPresenter: ICreateAccountPresenter {

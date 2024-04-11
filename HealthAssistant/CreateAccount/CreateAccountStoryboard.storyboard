@@ -39,7 +39,7 @@
                                                     <constraint firstAttribute="width" constant="35" id="m9B-gD-uU3"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p0a-vi-Zfp">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p0a-vi-Zfp">
                                                 <rect key="frame" x="45" y="0.0" width="248" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -59,7 +59,7 @@
                                                     <constraint firstAttribute="width" constant="35" id="IR2-F1-RoT"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuN-cU-bjW">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuN-cU-bjW">
                                                 <rect key="frame" x="45" y="0.0" width="248" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -79,7 +79,7 @@
                                                     <constraint firstAttribute="width" constant="35" id="zNf-fh-r3C"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rM-ZB-dXG">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Повторите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rM-ZB-dXG">
                                                 <rect key="frame" x="45" y="0.0" width="248" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -95,7 +95,10 @@
                                             <constraint firstAttribute="height" constant="40" id="dKi-2o-Wbe"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Войти"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Создать"/>
+                                        <connections>
+                                            <action selector="createButtonTouchUpInside:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WF3-Gt-nvM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -111,6 +114,11 @@
                             <constraint firstItem="4cX-LY-OcG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="uiP-sP-beN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="p0a-vi-Zfp" id="JCf-pw-UFo"/>
+                        <outlet property="passwordTextField" destination="IuN-cU-bjW" id="cfS-9O-p35"/>
+                        <outlet property="repeatPasswordTextField" destination="6rM-ZB-dXG" id="Je7-Rz-GfQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
