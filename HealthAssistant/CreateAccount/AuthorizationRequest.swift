@@ -22,5 +22,5 @@ struct AuthorizationRequest {
 
 struct Tokens: Codable {
     var accessToken: String
-    var refreshToken: String
+    var token: String
 }

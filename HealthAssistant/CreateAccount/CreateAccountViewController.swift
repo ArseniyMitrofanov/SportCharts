@@ -8,13 +8,12 @@
 import Foundation
 import UIKit
 
-protocol ICreateAccountViewController: AnyObject {
+protocol ICreateAccountViewController: IViewController {
     func selfDismiss()
-    func endEditing()
     func emailText() -> String?
     func passwordText() -> String?
     func repeatPasswordText() -> String?
-    func showAlert(title: String, message: String)
+    func showTabbar()
 }
 
 final class CreateAccountViewController: UIViewController {
@@ -63,6 +62,10 @@ extension CreateAccountViewController: ICreateAccountViewController {
     
     func selfDismiss() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func showTabbar() {
+        self.navigationController?.viewControllers = [TabbarController()]
     }
 }
 

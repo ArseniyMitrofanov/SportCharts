@@ -60,7 +60,8 @@ private extension CreateAccountPresenter {
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.httpBody = jsonData
 
-            URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            URLSession.shared.dataTask(with: urlRequest) {[weak self] data, response, error in
+                guard let self = self else {return}
                 guard let data = data, error == nil else {
                     print(error?.localizedDescription ?? "No data")
                     return
@@ -70,9 +71,13 @@ private extension CreateAccountPresenter {
                 let httpResponse = response as! HTTPURLResponse
                 print("SIGN IN STATUS : \(httpResponse.statusCode)")
                 if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) && tokens != nil{
-                    print( tokens!.accessToken)
+                    DispatchQueue.main.async {
+                        self.viewController.showTabbar()
+                    }
                 }else {
-                    print("no")
+                    DispatchQueue.main.async {
+                        self.viewController.showAlert(title: "Не удалось войти", message: "")
+                    }
                 }
             }
             .resume()

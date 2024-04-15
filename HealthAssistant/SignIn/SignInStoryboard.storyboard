@@ -94,6 +94,10 @@
                             <constraint firstAttribute="trailing" secondItem="bD8-Gq-TXS" secondAttribute="trailing" constant="50" id="qMJ-Lb-B7c"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="qwE-R0-gJ5" id="dYw-aE-82U"/>
+                        <outlet property="passwordTextField" destination="Pqo-wh-tQq" id="E1D-Bn-c1n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

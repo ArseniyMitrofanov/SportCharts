@@ -8,27 +8,51 @@
 import Foundation
 import UIKit
 
-protocol ISignInViewController: AnyObject {
+protocol ISignInViewController: IViewController {
     func showCreateAccountScreen()
     func showTabbar()
+    func emailText() -> String?
+    func passwordText() -> String?
 }
 
 final class SignInViewController: UIViewController {
     var presenter: ISignInPresenter?
     
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
     }
+    
     @IBAction func signInButtonTouchUpInside(_ sender: Any) {
         self.presenter?.signInButtonTouchUpInside()
     }
+    
     @IBAction func createAccountTouchUpInside(_ sender: Any) {
         self.presenter?.createAccountTouchUpInside()
     }
 }
 
 extension SignInViewController: ISignInViewController {
+    func showAlert(title: String, message: String) {
+        self.presentNativeAlert(title: title, message: message)
+    }
+    
+    func endEditing() {
+        self.view.endEditing(true)
+    }
+    
+    func emailText() -> String? {
+        return emailTextField.text
+    }
+    
+    func passwordText() -> String? {
+        return passwordTextField.text
+    }
+    
     func showCreateAccountScreen() {
         self.navigationController?.pushViewController(CreateAccountModuleBuilder.setupModule(), animated: true)
     }
@@ -38,8 +62,15 @@ extension SignInViewController: ISignInViewController {
     }
 }
 
+extension SignInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+    }
+}
+
 private extension SignInViewController {
     func setupUI() {
-        
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
 }
