@@ -62,15 +62,13 @@ private extension SignInPresenter {
                 let httpResponse = response as! HTTPURLResponse
                 print("SIGN IN STATUS : \(httpResponse.statusCode)")
                 if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) && tokens != nil{
-                    print("________________________________")
-                    print( tokens!.accessToken)
-                    print("________________________________")
-                    print( tokens!.token)
+                    print("Success")
+                    UserDefaultsManager.shared.saveTokens(tokens: tokens!)
                     DispatchQueue.main.async {
                         self.viewController.showTabbar()
                     }
                 }else {
-                    print("no")
+                    print("Failure")
                     DispatchQueue.main.async {
                         self.viewController.showAlert(title: "Не удалось войти", message: "")
                     }

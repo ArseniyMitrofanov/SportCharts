@@ -71,10 +71,13 @@ private extension CreateAccountPresenter {
                 let httpResponse = response as! HTTPURLResponse
                 print("SIGN IN STATUS : \(httpResponse.statusCode)")
                 if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) && tokens != nil{
+                    print("Success")
+                    UserDefaultsManager.shared.saveTokens(tokens: tokens!)
                     DispatchQueue.main.async {
                         self.viewController.showTabbar()
                     }
                 }else {
+                    print("Failure")
                     DispatchQueue.main.async {
                         self.viewController.showAlert(title: "Не удалось войти", message: "")
                     }

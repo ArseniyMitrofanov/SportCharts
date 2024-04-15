@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol IWeightViewController: AnyObject {
-    
+    func showAddWheightScreen()
 }
 
 final class WeightViewController: UIViewController {
@@ -19,11 +19,16 @@ final class WeightViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
+    @IBAction func addWheightButtonTapped(_ sender: Any) {
+        self.presenter?.addWheightButtonTapped()
+    }
     
 }
 
 extension WeightViewController: IWeightViewController {
-    
+    func showAddWheightScreen() {
+        self.present(AddWeightModuleBuilder.setupModule(), animated: true)
+    }
 }
 
 private extension WeightViewController {

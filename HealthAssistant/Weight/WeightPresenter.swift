@@ -8,7 +8,7 @@
 import Foundation
 
 protocol IWeightPreesenter {
-    
+    func addWheightButtonTapped()
 }
 
 final class WeightPresenter: IWeightPreesenter {
@@ -17,5 +17,9 @@ final class WeightPresenter: IWeightPreesenter {
     
     init(viewController: IWeightViewController) {
         self.viewController = viewController
+    }
+    
+    func addWheightButtonTapped() {
+        self.viewController.showAddWheightScreen()
     }
 }

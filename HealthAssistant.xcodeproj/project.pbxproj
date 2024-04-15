@@ -40,6 +40,10 @@
 		EAA8D1F42BB5BCDE0098B015 /* SplashPresener.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8D1F32BB5BCDE0098B015 /* SplashPresener.swift */; };
 		EAA8D1F62BB5BDB20098B015 /* SplashModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8D1F52BB5BDB20098B015 /* SplashModuleBuilder.swift */; };
 		EAC683BB2BCD6B910030FC3A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC683BA2BCD6B910030FC3A /* UserDefaultsManager.swift */; };
+		EAC683BE2BCD70CD0030FC3A /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC683BD2BCD70CD0030FC3A /* AddWeightViewController.swift */; };
+		EAC683C02BCD714C0030FC3A /* AddWeightStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC683BF2BCD714C0030FC3A /* AddWeightStoryboard.storyboard */; };
+		EAC683C22BCD72B50030FC3A /* AddWeightPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC683C12BCD72B50030FC3A /* AddWeightPresenter.swift */; };
+		EAC683C42BCD738A0030FC3A /* AddWeightModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC683C32BCD738A0030FC3A /* AddWeightModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,10 @@
 		EAA8D1F32BB5BCDE0098B015 /* SplashPresener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresener.swift; sourceTree = "<group>"; };
 		EAA8D1F52BB5BDB20098B015 /* SplashModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModuleBuilder.swift; sourceTree = "<group>"; };
 		EAC683BA2BCD6B910030FC3A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		EAC683BD2BCD70CD0030FC3A /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
+		EAC683BF2BCD714C0030FC3A /* AddWeightStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddWeightStoryboard.storyboard; sourceTree = "<group>"; };
+		EAC683C12BCD72B50030FC3A /* AddWeightPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightPresenter.swift; sourceTree = "<group>"; };
+		EAC683C32BCD738A0030FC3A /* AddWeightModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				EA0B322F2BC857BA00723D1E /* Validator.swift */,
+				EAC683BA2BCD6B910030FC3A /* UserDefaultsManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 				EA20AD942B863DE500F6D33D /* Tabbar */,
 				EA20ADA02B8645B400F6D33D /* Settings */,
 				EA20AD972B863F5A00F6D33D /* Weight */,
+				EAC683BC2BCD70AF0030FC3A /* AddWheight */,
 				EA3FBDBA2BAD8BC000D17230 /* UI */,
 				EA0B322B2BC8569E00723D1E /* Helpers */,
 				EA20AD892B863A5600F6D33D /* Assets.xcassets */,
@@ -227,6 +237,17 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		EAC683BC2BCD70AF0030FC3A /* AddWheight */ = {
+			isa = PBXGroup;
+			children = (
+				EAC683C32BCD738A0030FC3A /* AddWeightModuleBuilder.swift */,
+				EAC683C12BCD72B50030FC3A /* AddWeightPresenter.swift */,
+				EAC683BD2BCD70CD0030FC3A /* AddWeightViewController.swift */,
+				EAC683BF2BCD714C0030FC3A /* AddWeightStoryboard.storyboard */,
+			);
+			path = AddWheight;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +311,7 @@
 				EA20ADA42B86467600F6D33D /* SettingsStoryboard.storyboard in Resources */,
 				EA3FBDC32BAD985100D17230 /* SettingsTableViewCell.xib in Resources */,
 				EAA8D1F22BB5BCB00098B015 /* SplashStoryboard.storyboard in Resources */,
+				EAC683C02BCD714C0030FC3A /* AddWeightStoryboard.storyboard in Resources */,
 				EAA8D1EB2BB5B8AA0098B015 /* SignInStoryboard.storyboard in Resources */,
 				EA20AD8A2B863A5600F6D33D /* Assets.xcassets in Resources */,
 				EAA847802BBDD57E0059E281 /* CreateAccountStoryboard.storyboard in Resources */,
@@ -304,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA20AD9B2B86407600F6D33D /* WeightPresenter.swift in Sources */,
+				EAC683C22BCD72B50030FC3A /* AddWeightPresenter.swift in Sources */,
 				EA3FBDBC2BAD8BEC00D17230 /* WhiteBorderButton.swift in Sources */,
 				EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */,
 				EA3FBDBE2BAD927A00D17230 /* SettingsContentModel.swift in Sources */,
@@ -314,9 +337,12 @@
 				EA20ADA22B8645E100F6D33D /* SettingsViewController.swift in Sources */,
 				EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */,
 				EA20ADA62B8646B400F6D33D /* SettingsPresenter.swift in Sources */,
+				EAC683BB2BCD6B910030FC3A /* UserDefaultsManager.swift in Sources */,
+				EAC683BE2BCD70CD0030FC3A /* AddWeightViewController.swift in Sources */,
 				EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */,
 				EA20AD812B863A5300F6D33D /* AppDelegate.swift in Sources */,
 				EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */,
+				EAC683C42BCD738A0030FC3A /* AddWeightModuleBuilder.swift in Sources */,
 				EAA847842BBDD8A70059E281 /* CreateAccountModuleBuilder.swift in Sources */,
 				EAA8D1ED2BB5B8FD0098B015 /* SignInModuleBuilder.swift in Sources */,
 				EA0B32302BC857BA00723D1E /* Validator.swift in Sources */,

@@ -17,22 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIL-eV-PgX" customClass="WhiteBorderButton" customModule="HealthAssistant" customModuleProvider="target">
-                                <rect key="frame" x="146.66666666666666" y="396" width="100" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vR-Zt-JZI" customClass="WhiteBorderButton" customModule="HealthAssistant" customModuleProvider="target">
+                                <rect key="frame" x="16" y="728" width="361" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="D2E-h8-sSO"/>
-                                    <constraint firstAttribute="height" constant="60" id="VLQ-8o-siY"/>
+                                    <constraint firstAttribute="height" constant="60" id="1s1-DF-5bm"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Roman"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Добавить измерение"/>
+                                <connections>
+                                    <action selector="addWheightButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="roJ-XJ-Axc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Backgroud"/>
                         <constraints>
-                            <constraint firstItem="vIL-eV-PgX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1Tv-f0-djH"/>
-                            <constraint firstItem="vIL-eV-PgX" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ckg-CX-3gB"/>
+                            <constraint firstItem="4vR-Zt-JZI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Uzw-nY-Rz5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4vR-Zt-JZI" secondAttribute="trailing" constant="16" id="bxF-QO-yop"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4vR-Zt-JZI" secondAttribute="bottom" constant="30" id="jPc-4c-fG8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -43,7 +45,7 @@
     </scenes>
     <resources>
         <namedColor name="Backgroud">
-            <color red="0.53478831942108129" green="0.68461832778288123" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.53333333333333333" green="0.68235294117647061" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
