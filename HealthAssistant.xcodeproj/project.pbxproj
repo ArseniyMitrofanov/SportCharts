@@ -24,6 +24,7 @@
 		EA20ADA62B8646B400F6D33D /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20ADA52B8646B400F6D33D /* SettingsPresenter.swift */; };
 		EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20ADA72B86476900F6D33D /* SettingsModuleBuilder.swift */; };
 		EA2853542BD2885600A928F3 /* RefreshTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2853532BD2885600A928F3 /* RefreshTokenManager.swift */; };
+		EA2853562BD28FBA00A928F3 /* WeightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2853552BD28FBA00A928F3 /* WeightModel.swift */; };
 		EA3FBDBC2BAD8BEC00D17230 /* WhiteBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBB2BAD8BEC00D17230 /* WhiteBorderButton.swift */; };
 		EA3FBDBE2BAD927A00D17230 /* SettingsContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */; };
 		EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */; };
@@ -67,6 +68,7 @@
 		EA20ADA52B8646B400F6D33D /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		EA20ADA72B86476900F6D33D /* SettingsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModuleBuilder.swift; sourceTree = "<group>"; };
 		EA2853532BD2885600A928F3 /* RefreshTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenManager.swift; sourceTree = "<group>"; };
+		EA2853552BD28FBA00A928F3 /* WeightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightModel.swift; sourceTree = "<group>"; };
 		EA3FBDBB2BAD8BEC00D17230 /* WhiteBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBorderButton.swift; sourceTree = "<group>"; };
 		EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContentModel.swift; sourceTree = "<group>"; };
 		EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				EA20AD9C2B86414F00F6D33D /* WeightModuleBuilder.swift */,
 				EA20AD9A2B86407600F6D33D /* WeightPresenter.swift */,
+				EA2853552BD28FBA00A928F3 /* WeightModel.swift */,
 				EA20AD982B863FBA00F6D33D /* WeightViewController.swift */,
 				EA20AD9E2B8641EE00F6D33D /* WeightStoryboard.storyboard */,
 			);
@@ -361,6 +364,7 @@
 				EA20AD962B863E0E00F6D33D /* TabbarController.swift in Sources */,
 				EAA8D1E72BB5B6810098B015 /* SignInViewController.swift in Sources */,
 				EAA8D1F62BB5BDB20098B015 /* SplashModuleBuilder.swift in Sources */,
+				EA2853562BD28FBA00A928F3 /* WeightModel.swift in Sources */,
 				EA20AD832B863A5300F6D33D /* SceneDelegate.swift in Sources */,
 				EA0B322A2BC848E400723D1E /* AuthorizationRequest.swift in Sources */,
 				EA20AD9D2B86414F00F6D33D /* WeightModuleBuilder.swift in Sources */,

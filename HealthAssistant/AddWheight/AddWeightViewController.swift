@@ -31,6 +31,9 @@ final class AddWeightViewController: UIViewController {
     @IBAction func backButtonTouhUpInside(_ sender: Any) {
         self.presenter?.backButtonTouhUpInside()
     }
+    @IBAction func addButtonTouchUpInside(_ sender: Any) {
+        self.presenter?.addButtonTapped()
+    }
 }
 
 extension AddWeightViewController: IAddWeightViewController {
