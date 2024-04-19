@@ -7,18 +7,18 @@
 
 import Foundation
 
-protocol IAddWeightPreesenter {
+protocol IAddWeightPresenter {
     func viewDidLoad()
     func addButtonTapped()
     func backButtonTouhUpInside()
     func pickerViewDidSelectRow(at row: Int)
 }
 
-final class AddWeightPresenter: IAddWeightPreesenter {
+final class AddWeightPresenter: IAddWeightPresenter {
     
     private unowned var viewController: IAddWeightViewController
     private var selectedWeightValue = 0
-    private var getCurrentDateString = ""
+    private var currentDateString = ""
     init(viewController: IAddWeightViewController) {
         self.viewController = viewController
     }
@@ -41,12 +41,12 @@ final class AddWeightPresenter: IAddWeightPreesenter {
     }
 }
 
-private extension IAddWeightPreesenter {
+private extension AddWeightPresenter {
     func getCurrentDateTime() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy-HH:mm"
-        self.getCurrentDateString = formatter.string(from: Date())
-        return self.getCurrentDateString
+        self.currentDateString = formatter.string(from: Date())
+        return self.currentDateString
     }
 }
 

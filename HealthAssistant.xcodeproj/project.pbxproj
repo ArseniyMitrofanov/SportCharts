@@ -23,6 +23,7 @@
 		EA20ADA42B86467600F6D33D /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA20ADA32B86467600F6D33D /* SettingsStoryboard.storyboard */; };
 		EA20ADA62B8646B400F6D33D /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20ADA52B8646B400F6D33D /* SettingsPresenter.swift */; };
 		EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20ADA72B86476900F6D33D /* SettingsModuleBuilder.swift */; };
+		EA2853542BD2885600A928F3 /* RefreshTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2853532BD2885600A928F3 /* RefreshTokenManager.swift */; };
 		EA3FBDBC2BAD8BEC00D17230 /* WhiteBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBB2BAD8BEC00D17230 /* WhiteBorderButton.swift */; };
 		EA3FBDBE2BAD927A00D17230 /* SettingsContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */; };
 		EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 		EA20ADA32B86467600F6D33D /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		EA20ADA52B8646B400F6D33D /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		EA20ADA72B86476900F6D33D /* SettingsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModuleBuilder.swift; sourceTree = "<group>"; };
+		EA2853532BD2885600A928F3 /* RefreshTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenManager.swift; sourceTree = "<group>"; };
 		EA3FBDBB2BAD8BEC00D17230 /* WhiteBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBorderButton.swift; sourceTree = "<group>"; };
 		EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContentModel.swift; sourceTree = "<group>"; };
 		EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				EA0B322F2BC857BA00723D1E /* Validator.swift */,
-				EAC683BA2BCD6B910030FC3A /* UserDefaultsManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -137,6 +138,7 @@
 			children = (
 				EA20AD802B863A5300F6D33D /* AppDelegate.swift */,
 				EA20AD822B863A5300F6D33D /* SceneDelegate.swift */,
+				EA2853522BD2882900A928F3 /* Shared */,
 				EAA8D1EE2BB5BC210098B015 /* Splash */,
 				EAA8D1E52BB5B6680098B015 /* SignIn */,
 				EAA8477C2BBDD4D00059E281 /* CreateAccount */,
@@ -183,6 +185,15 @@
 				EA3FBDBF2BAD982100D17230 /* SettingsTableViewCell */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		EA2853522BD2882900A928F3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EAC683BA2BCD6B910030FC3A /* UserDefaultsManager.swift */,
+				EA2853532BD2885600A928F3 /* RefreshTokenManager.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		EA3FBDBA2BAD8BC000D17230 /* UI */ = {
@@ -329,6 +340,7 @@
 				EAC683C22BCD72B50030FC3A /* AddWeightPresenter.swift in Sources */,
 				EA3FBDBC2BAD8BEC00D17230 /* WhiteBorderButton.swift in Sources */,
 				EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */,
+				EA2853542BD2885600A928F3 /* RefreshTokenManager.swift in Sources */,
 				EA3FBDBE2BAD927A00D17230 /* SettingsContentModel.swift in Sources */,
 				EAA8D1E92BB5B80D0098B015 /* SignInPresenter.swift in Sources */,
 				EA20AD992B863FBA00F6D33D /* WeightViewController.swift in Sources */,

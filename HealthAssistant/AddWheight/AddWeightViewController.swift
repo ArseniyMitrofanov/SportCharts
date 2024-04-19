@@ -14,7 +14,7 @@ protocol IAddWeightViewController: AnyObject {
 }
 
 final class AddWeightViewController: UIViewController {
-    var presenter: IAddWeightPreesenter?
+    var presenter: IAddWeightPresenter?
     
     @IBOutlet weak var pickerView: UIPickerView!
     

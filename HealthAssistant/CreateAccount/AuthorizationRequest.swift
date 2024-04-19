@@ -13,9 +13,7 @@ struct AuthorizationRequest {
     
     public func encode() -> [String: Any] {
         return ["username": self.email,
-                "password": self.password,
-                "firstname": "firstname",
-                "lastname": "lastname"
+                "password": self.password
         ]
     }
 }

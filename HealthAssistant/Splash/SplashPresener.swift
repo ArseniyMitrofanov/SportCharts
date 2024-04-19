@@ -19,10 +19,26 @@ final class SplashPresenter: ISplashPresenter {
     }
     
     func viewDidLoad() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute:  { [weak self] in
-            guard let self = self else {return}
-            self.viewController.presentSignIn()
-        })
+        if let tokens = UserDefaultsManager.shared.getTokens() {
+            RefreshTokenManager.shared.updateTokens(with: tokens.token) { result in
+                if result {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:  { [weak self] in
+                        guard let self = self else {return}
+                        self.viewController.presentTabbar()
+                    })
+                }else {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:  { [weak self] in
+                        guard let self = self else {return}
+                        self.viewController.presentSignIn()
+                    })
+                }
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:  { [weak self] in
+                guard let self = self else {return}
+                self.viewController.presentSignIn()
+            })
+        }
     }
 }
 
