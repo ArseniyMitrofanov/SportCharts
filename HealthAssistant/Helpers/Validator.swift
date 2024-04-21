@@ -22,4 +22,11 @@ enum Validator {
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
         return passwordPredicate.evaluate(with: notNilText)
     }
+    
+    static func key(from text: String?) -> Bool {
+        guard let notNilText = text else { return false }
+        let keyRegex = "^[0-9]{6}$"
+        let keyPredicate = NSPredicate(format: "SELF MATCHES %@", keyRegex)
+        return keyPredicate.evaluate(with: notNilText)    }
 }
+
