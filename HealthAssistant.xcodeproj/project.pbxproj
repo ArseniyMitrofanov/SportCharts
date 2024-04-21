@@ -31,6 +31,10 @@
 		EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */; };
 		EA3FBDC32BAD985100D17230 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */; };
 		EA4B31112BD53BA000FF1E84 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31102BD53BA000FF1E84 /* Chart.swift */; };
+		EA4B31142BD56F0B00FF1E84 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31132BD56F0B00FF1E84 /* ForgotPasswordViewController.swift */; };
+		EA4B31162BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4B31152BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard */; };
+		EA4B31182BD5700A00FF1E84 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31172BD5700A00FF1E84 /* ForgotPasswordPresenter.swift */; };
+		EA4B311A2BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31192BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift */; };
 		EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */; };
 		EAA847802BBDD57E0059E281 /* CreateAccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */; };
 		EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */; };
@@ -76,6 +80,10 @@
 		EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		EA4B31102BD53BA000FF1E84 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		EA4B31132BD56F0B00FF1E84 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		EA4B31152BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordStoryboard.storyboard; sourceTree = "<group>"; };
+		EA4B31172BD5700A00FF1E84 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		EA4B31192BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModuleBuilder.swift; sourceTree = "<group>"; };
 		EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccountStoryboard.storyboard; sourceTree = "<group>"; };
 		EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
@@ -148,6 +156,7 @@
 				EAA8D1EE2BB5BC210098B015 /* Splash */,
 				EAA8D1E52BB5B6680098B015 /* SignIn */,
 				EAA8477C2BBDD4D00059E281 /* CreateAccount */,
+				EA4B31122BD56ED800FF1E84 /* ForgotPassword */,
 				EA20AD942B863DE500F6D33D /* Tabbar */,
 				EA20ADA02B8645B400F6D33D /* Settings */,
 				EA20AD972B863F5A00F6D33D /* Weight */,
@@ -220,6 +229,17 @@
 				EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */,
 			);
 			path = SettingsTableViewCell;
+			sourceTree = "<group>";
+		};
+		EA4B31122BD56ED800FF1E84 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B31192BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift */,
+				EA4B31172BD5700A00FF1E84 /* ForgotPasswordPresenter.swift */,
+				EA4B31132BD56F0B00FF1E84 /* ForgotPasswordViewController.swift */,
+				EA4B31152BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		EAA8477C2BBDD4D00059E281 /* CreateAccount */ = {
@@ -336,6 +356,7 @@
 				EA20ADA42B86467600F6D33D /* SettingsStoryboard.storyboard in Resources */,
 				EA3FBDC32BAD985100D17230 /* SettingsTableViewCell.xib in Resources */,
 				EAA8D1F22BB5BCB00098B015 /* SplashStoryboard.storyboard in Resources */,
+				EA4B31162BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard in Resources */,
 				EAC683C02BCD714C0030FC3A /* AddWeightStoryboard.storyboard in Resources */,
 				EAA8D1EB2BB5B8AA0098B015 /* SignInStoryboard.storyboard in Resources */,
 				EA20AD8A2B863A5600F6D33D /* Assets.xcassets in Resources */,
@@ -350,6 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4B31142BD56F0B00FF1E84 /* ForgotPasswordViewController.swift in Sources */,
+				EA4B31182BD5700A00FF1E84 /* ForgotPasswordPresenter.swift in Sources */,
 				EA20AD9B2B86407600F6D33D /* WeightPresenter.swift in Sources */,
 				EAC683C22BCD72B50030FC3A /* AddWeightPresenter.swift in Sources */,
 				EA3FBDBC2BAD8BEC00D17230 /* WhiteBorderButton.swift in Sources */,
@@ -369,6 +392,7 @@
 				EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */,
 				EA20AD812B863A5300F6D33D /* AppDelegate.swift in Sources */,
 				EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */,
+				EA4B311A2BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift in Sources */,
 				EAC683C42BCD738A0030FC3A /* AddWeightModuleBuilder.swift in Sources */,
 				EAA847842BBDD8A70059E281 /* CreateAccountModuleBuilder.swift in Sources */,
 				EAA8D1ED2BB5B8FD0098B015 /* SignInModuleBuilder.swift in Sources */,

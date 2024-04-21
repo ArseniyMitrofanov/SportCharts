@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bD8-Gq-TXS">
-                                <rect key="frame" x="50" y="159" width="293" height="220"/>
+                                <rect key="frame" x="50" y="139" width="293" height="280"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-9T-1ym">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="40"/>
@@ -60,8 +60,19 @@
                                             <constraint firstAttribute="height" constant="40" id="bkX-Oq-LDd"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-0X-3QO" customClass="WhiteBorderButton" customModule="HealthAssistant" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aX-5C-ZAR" customClass="WhiteBorderButton" customModule="HealthAssistant" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="293" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7FL-KA-zmn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="j64-aB-PUc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-0X-3QO" customClass="WhiteBorderButton" customModule="HealthAssistant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="293" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="C2U-X9-aLr"/>
                                         </constraints>
@@ -72,7 +83,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUs-hG-LXG" customClass="WhiteBorderButton" customModule="HealthAssistant" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="180" width="293" height="40"/>
+                                        <rect key="frame" x="0.0" y="240" width="293" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="MpV-xZ-Rsa"/>
                                         </constraints>
@@ -90,7 +101,7 @@
                         <constraints>
                             <constraint firstItem="bD8-Gq-TXS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="SCI-DW-ST0"/>
                             <constraint firstItem="bD8-Gq-TXS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="SZ5-md-2me"/>
-                            <constraint firstItem="bD8-Gq-TXS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="jf6-hJ-otQ"/>
+                            <constraint firstItem="bD8-Gq-TXS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="jf6-hJ-otQ"/>
                             <constraint firstAttribute="trailing" secondItem="bD8-Gq-TXS" secondAttribute="trailing" constant="50" id="qMJ-Lb-B7c"/>
                         </constraints>
                     </view>

@@ -10,6 +10,7 @@ import Foundation
 protocol ISignInPresenter {
     func signInButtonTouchUpInside()
     func createAccountTouchUpInside()
+    func forgotPasswordButtonTapped()
 }
 
 final class SignInPresenter: ISignInPresenter {
@@ -37,6 +38,15 @@ final class SignInPresenter: ISignInPresenter {
     
     func createAccountTouchUpInside() {
         self.viewController.showCreateAccountScreen()
+    }
+    
+    func forgotPasswordButtonTapped() {
+        let emailText = self.viewController.emailText()
+        if Validator.email(from: emailText) {
+            self.sendForgotPasswordRequest(email: emailText!)
+        }else {
+            self.viewController.showAlert(title: "Неверно заполнено поле email", message: "")
+        }
     }
 }
 
@@ -72,6 +82,38 @@ private extension SignInPresenter {
                         self.viewController.showAlert(title: "Не удалось войти", message: "")
                     }
                 }
+            }
+            .resume()
+        }
+    }
+    
+    func sendForgotPasswordRequest(email: String) {
+        if let url = URL(string:  "https://healthassistant-production.up.railway.app/api/v1.0/auth/forgot-password") {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            let json: [String: Any] = ["username": email ]
+            let jsonData = try? JSONSerialization.data(withJSONObject: json)
+            urlRequest.httpBody = jsonData
+            
+            URLSession.shared.dataTask(with: urlRequest) {[weak self] data, response, error in
+                guard let self = self else {return}
+                guard let _ = data, error == nil else {
+                    print(error?.localizedDescription ?? "No data")
+                    return
+                }
+                let httpResponse = response as! HTTPURLResponse
+                print("STATUS : \(httpResponse.statusCode)")
+                if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) {
+                    DispatchQueue.main.async {
+                        self.viewController.showForgotPasswordScreen(email: email)
+                    }
+                }else {
+                    DispatchQueue.main.async {
+                        self.viewController.showAlert(title: "Не удалось восстановить пароль для этой почты", message: "")
+                    }
+                }
+                
             }
             .resume()
         }

@@ -1,54 +1,49 @@
 //
-//  CreateAccountPresenter.swift
+//  ForgotPasswordPresenter.swift
 //  HealthAssistant
 //
-//  Created by Арсений on 3.04.24.
+//  Created by Арсений on 21.04.24.
 //
 
 import Foundation
 
-protocol ICreateAccountPresenter {
-    func backButtonTouchupInside()
-    func createButtonTouchUpInside()
+protocol IForgotPasswordPresenter {
+    func nextButtonTouchUpInside()
+    func viewDidLoad()
+    func backButtonTouchUpInside()
 }
 
-final class CreateAccountPresenter: ICreateAccountPresenter {
-    private unowned var viewController: ICreateAccountViewController
-    private var hasSentKey = false
-    private var request: AuthorizationRequest?
+final class ForgotPasswordPresenter: IForgotPasswordPresenter {
+    private unowned var viewController: IForgotPasswordViewController
+    private var email: String
+    private var didvalidateKey = false
+    private var key = ""
     
-    init(viewController: ICreateAccountViewController) {
+    init(viewController: IForgotPasswordViewController, email: String) {
         self.viewController = viewController
+        self.email = email
     }
     
-    func backButtonTouchupInside() {
-        self.viewController.selfDismiss()
+    func viewDidLoad() {
+        self.viewController.setEmailLabeltext(self.email)
     }
-
-    func createButtonTouchUpInside() {
-        
-        if !self.hasSentKey {
-            self.continueAction()
+    
+    func nextButtonTouchUpInside() {
+        if !didvalidateKey {
+            let key = self.viewController.keyText()
+            if Validator.key(from: key) {
+                self.key = key!
+                self.sendKey(key!)
+            }else {
+                viewController.showAlert(title: "Неверно заполнено поле ключ", message: "Ключ должен содержать только 6 цыфр")
+            }
         }else {
-            self.createAction()
-        }
-    }
-}
-
-private extension CreateAccountPresenter {
-    
-    func continueAction() {
-        self.viewController.endEditing()
-        let emailText = self.viewController.emailText()
-        if Validator.email(from: emailText) {
             let passwordText = self.viewController.passwordText()
             if Validator.password(from: passwordText) {
                 let repeatPasswordText = self.viewController.repeatPasswordText()
                 if Validator.password(from: repeatPasswordText) {
                     if passwordText == repeatPasswordText {
-                        let request = AuthorizationRequest(email: emailText!, password: passwordText!)
-                        self.request = request
-                        self.sendCreateAccountRequest(request: request)
+                        self.sendNewPassword(passwordText!)
                     }else {
                         self.viewController.showAlert(title: "Пароли не совпадают", message: "")
                     }
@@ -58,33 +53,24 @@ private extension CreateAccountPresenter {
             }else {
                 self.viewController.showAlert(title: "Неверно заполнено поле пароль", message: "Пароль может содержать только латинские буквы, цифры и специальные символы")
             }
-        }else {
-            self.viewController.showAlert(title: "Неверно заполнено поле email", message: "")
         }
     }
     
-    func createAction() {
-        self.viewController.endEditing()
-        if let request = self.request,
-           Validator.key(from: self.viewController.keyText()) {
-            let key = self.viewController.keyText()
-            self.sendKeyRequest(request: request, key: key!)
-        }else {
-            self.viewController.showAlert(title: "Неверно заполнено поле ключ", message: "Ключ должен содержать только 6 цыфр")
-        }
+    func backButtonTouchUpInside() {
+        self.viewController.selfDismiss()
     }
-    
-    
-    func sendCreateAccountRequest(request: AuthorizationRequest) {
-        let json = request.encode()
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
-        
-        if let url = URL(string:  "https://healthassistant-production.up.railway.app/api/v1.0/auth/register") {
+}
+
+extension ForgotPasswordPresenter {
+    func sendKey(_ key: String) {
+        if let url = URL(string:  "https://healthassistant-production.up.railway.app/api/v1.0/auth/verify-reset-code") {
+            let json: [String: Any] = ["username": self.email, "code": key ]
+            let jsonData = try? JSONSerialization.data(withJSONObject: json)
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "POST"
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.httpBody = jsonData
-
+            
             URLSession.shared.dataTask(with: urlRequest) {[weak self] data, response, error in
                 guard let self = self else {return}
                 guard let _ = data, error == nil else {
@@ -95,14 +81,13 @@ private extension CreateAccountPresenter {
                 print("STATUS : \(httpResponse.statusCode)")
                 if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) {
                     print("Success")
+                    self.didvalidateKey = true
                     DispatchQueue.main.async {
-                        self.hasSentKey = true
-                        self.viewController.showKeyContent()
+                        self.viewController.showPasswordTextFields()
                     }
                 }else {
-                    print("Failure")
                     DispatchQueue.main.async {
-                        self.viewController.showAlert(title: "Не удалось сделать запрос на создание аккаунта", message: "")
+                        self.viewController.showAlert(title: "Не удалось подтвердить почту", message: "Проверьте ключ или попробуйте заново")
                     }
                 }
             }
@@ -110,11 +95,10 @@ private extension CreateAccountPresenter {
         }
     }
     
-    func sendKeyRequest(request: AuthorizationRequest, key: String) {
-        let json = request.encode()
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
-        
-        if let url = URL(string:  "https://healthassistant-production.up.railway.app/api/v1.0/auth/activate/\(key)") {
+    func sendNewPassword(_ password: String) {
+        if let url = URL(string:  "https://healthassistant-production.up.railway.app/api/v1.0/auth/verify-reset-code") {
+            let json: [String: Any] = ["username": self.email, "password": password, "code": self.key ]
+            let jsonData = try? JSONSerialization.data(withJSONObject: json)
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "POST"
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -126,10 +110,14 @@ private extension CreateAccountPresenter {
                     print(error?.localizedDescription ?? "No data")
                     return
                 }
+                if let jsonString = String(data: data, encoding: .utf8) {
+                       print("Received JSON: \(jsonString)")
+                   }
+                
                 let tokens = try? JSONDecoder().decode(Tokens.self, from: data)
                 let httpResponse = response as! HTTPURLResponse
                 print("STATUS : \(httpResponse.statusCode)")
-                if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) && tokens != nil {
+                if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) && tokens != nil{
                     print("Success")
                     AppFileManager.shared.saveTokens(tokens: tokens!)
                     DispatchQueue.main.async {

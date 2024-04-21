@@ -146,7 +146,9 @@
                         <outlet property="keyLabel" destination="mTx-Vn-ehb" id="vVR-ys-pdp"/>
                         <outlet property="keyStackView" destination="9IB-Wq-lN8" id="FYk-eQ-HHa"/>
                         <outlet property="keyTextField" destination="seq-nK-xxP" id="qIR-af-PzW"/>
-                        <outlet property="passwordTextField" destination="IuN-cU-bjW" id="cfS-9O-p35"/>
+                        <outlet property="passwordStackView" destination="lo2-No-9Ew" id="4pN-Yd-Neb"/>
+                        <outlet property="passwordTextField" destination="IuN-cU-bjW" id="LNH-Q8-4Xk"/>
+                        <outlet property="repeatPasswordStackView" destination="lM5-Cw-onV" id="gXs-yx-bcy"/>
                         <outlet property="repeatPasswordTextField" destination="6rM-ZB-dXG" id="Je7-Rz-GfQ"/>
                     </connections>
                 </viewController>

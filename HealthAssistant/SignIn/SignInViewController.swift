@@ -8,11 +8,14 @@
 import Foundation
 import UIKit
 
-protocol ISignInViewController: IViewController {
+protocol ISignInViewController: AnyObject {
     func showCreateAccountScreen()
     func showTabbar()
     func emailText() -> String?
     func passwordText() -> String?
+    func showForgotPasswordScreen(email: String)
+    func endEditing()
+    func showAlert(title: String, message: String)
 }
 
 final class SignInViewController: UIViewController {
@@ -27,6 +30,10 @@ final class SignInViewController: UIViewController {
         self.setupUI()
     }
     
+    @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
+        self.presenter?.forgotPasswordButtonTapped()
+    }
+    
     @IBAction func signInButtonTouchUpInside(_ sender: Any) {
         self.presenter?.signInButtonTouchUpInside()
     }
@@ -37,6 +44,10 @@ final class SignInViewController: UIViewController {
 }
 
 extension SignInViewController: ISignInViewController {
+    func showForgotPasswordScreen(email: String) {
+        self.navigationController?.pushViewController(ForgotPasswordModuleBuilder.setupModule(email: email), animated: true)
+    }
+  
     func showAlert(title: String, message: String) {
         self.presentNativeAlert(title: title, message: message)
     }

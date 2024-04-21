@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol ICreateAccountViewController: IViewController {
+protocol ICreateAccountViewController: AnyObject {
     func selfDismiss()
     func emailText() -> String?
     func passwordText() -> String?
@@ -16,19 +16,22 @@ protocol ICreateAccountViewController: IViewController {
     func keyText() -> String?
     func showTabbar()
     func showKeyContent()
+    func endEditing()
+    func showAlert(title: String, message: String)
 }
 
 final class CreateAccountViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var passwordStackView: UIStackView!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var keyLabel: UILabel!
-    
+    @IBOutlet weak var repeatPasswordStackView: UIStackView!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
     
     @IBOutlet weak var keyStackView: UIStackView!
+    @IBOutlet weak var keyLabel: UILabel!
     
     @IBOutlet weak var keyTextField: UITextField!
     
@@ -54,7 +57,10 @@ extension CreateAccountViewController: ICreateAccountViewController {
     func showKeyContent() {
         self.keyLabel.isHidden = false
         self.keyStackView.isHidden = false
+        self.passwordStackView.isHidden = true
+        self.repeatPasswordStackView.isHidden = true
         self.createButton.setTitle("Создать", for: .normal)
+        self.passwordTextField.isUserInteractionEnabled = false
     }
     
     func showAlert(title: String, message: String) {
@@ -76,7 +82,6 @@ extension CreateAccountViewController: ICreateAccountViewController {
     func repeatPasswordText() -> String? {
         return repeatPasswordTextField.text
     }
-    
     func keyText() -> String? {
         return keyTextField.text
     }
