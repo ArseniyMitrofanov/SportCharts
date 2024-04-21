@@ -11,6 +11,8 @@ final class AppFileManager {
     static let shared = AppFileManager()
     private init() {}
     
+    private let weightArrayFileUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("weightArray.json")
+    
     func saveTokens(tokens: Tokens) {
         UserDefaults.standard.setValue(tokens.accessToken, forKey: "accessToken")
         UserDefaults.standard.setValue(tokens.token, forKey: "refreshToken")
@@ -30,6 +32,21 @@ final class AppFileManager {
     }
     
     func saveNewWeightArray(_ array: [WeightModel]) {
-        Filem
+        do{
+            let json = try JSONEncoder().encode(array)
+            try json.write(to: weightArrayFileUrl)
+        }catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func getWeightArray() -> [WeightModel] {
+        var weightArray: [WeightModel] = []
+        do{
+            weightArray = try JSONDecoder().decode([WeightModel].self, from:FileManager.default.contents(atPath: weightArrayFileUrl.path) ?? .init())
+        }catch{
+            weightArray = []
+        }
+        return weightArray
     }
 }

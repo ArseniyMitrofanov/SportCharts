@@ -51,11 +51,10 @@ private extension AddWeightPresenter {
     }
     
     func sendNewWeight() {
-        let weight = WeightModel(value: self.selectedWeightValue, date: self.currentDateString)
+        let weight = WeightModel(weight: self.selectedWeightValue, dateTime: self.currentDateString)
         if let url = URL(string:  "https://healthassistant-production.up.railway.app/api/v1.0/weight"),
            let tokens = AppFileManager.shared.getTokens() {
-            //todo weight.date
-            let json: [String: Any] = ["weight": weight.value, "date": "2024-04-04" ]
+            let json: [String: Any] = ["weight": weight.weight, "dateTime": weight.dateTime ]
             let jsonData = try? JSONSerialization.data(withJSONObject: json)
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "POST"
@@ -73,6 +72,9 @@ private extension AddWeightPresenter {
                 print("STATUS : \(httpResponse.statusCode)")
                 if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) {
                     print("Success")
+                    var arrayWeight = AppFileManager.shared.getWeightArray()
+                    arrayWeight.append(weight)
+                    AppFileManager.shared.saveNewWeightArray(arrayWeight)
                 }else if httpResponse.statusCode == 401 {
                     RefreshTokenManager.shared.updateTokens(with: tokens.token) { result in
                         if result {
@@ -87,7 +89,6 @@ private extension AddWeightPresenter {
                 }
             }
             .resume()
-            
         }
         
         

@@ -30,6 +30,7 @@
 		EA3FBDBE2BAD927A00D17230 /* SettingsContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */; };
 		EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */; };
 		EA3FBDC32BAD985100D17230 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */; };
+		EA4B31112BD53BA000FF1E84 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31102BD53BA000FF1E84 /* Chart.swift */; };
 		EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */; };
 		EAA847802BBDD57E0059E281 /* CreateAccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */; };
 		EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */; };
@@ -42,7 +43,7 @@
 		EAA8D1F22BB5BCB00098B015 /* SplashStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA8D1F12BB5BCB00098B015 /* SplashStoryboard.storyboard */; };
 		EAA8D1F42BB5BCDE0098B015 /* SplashPresener.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8D1F32BB5BCDE0098B015 /* SplashPresener.swift */; };
 		EAA8D1F62BB5BDB20098B015 /* SplashModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8D1F52BB5BDB20098B015 /* SplashModuleBuilder.swift */; };
-		EAC683BB2BCD6B910030FC3A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC683BA2BCD6B910030FC3A /* UserDefaultsManager.swift */; };
+		EAC683BB2BCD6B910030FC3A /* AppFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC683BA2BCD6B910030FC3A /* AppFileManager.swift */; };
 		EAC683BE2BCD70CD0030FC3A /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC683BD2BCD70CD0030FC3A /* AddWeightViewController.swift */; };
 		EAC683C02BCD714C0030FC3A /* AddWeightStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC683BF2BCD714C0030FC3A /* AddWeightStoryboard.storyboard */; };
 		EAC683C22BCD72B50030FC3A /* AddWeightPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC683C12BCD72B50030FC3A /* AddWeightPresenter.swift */; };
@@ -74,6 +75,7 @@
 		EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContentModel.swift; sourceTree = "<group>"; };
 		EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		EA3FBDC12BAD985100D17230 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		EA4B31102BD53BA000FF1E84 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccountStoryboard.storyboard; sourceTree = "<group>"; };
 		EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
@@ -86,7 +88,7 @@
 		EAA8D1F12BB5BCB00098B015 /* SplashStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashStoryboard.storyboard; sourceTree = "<group>"; };
 		EAA8D1F32BB5BCDE0098B015 /* SplashPresener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresener.swift; sourceTree = "<group>"; };
 		EAA8D1F52BB5BDB20098B015 /* SplashModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModuleBuilder.swift; sourceTree = "<group>"; };
-		EAC683BA2BCD6B910030FC3A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		EAC683BA2BCD6B910030FC3A /* AppFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFileManager.swift; sourceTree = "<group>"; };
 		EAC683BD2BCD70CD0030FC3A /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
 		EAC683BF2BCD714C0030FC3A /* AddWeightStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddWeightStoryboard.storyboard; sourceTree = "<group>"; };
 		EAC683C12BCD72B50030FC3A /* AddWeightPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightPresenter.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2853592BD5235300A928F3 /* DGCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,10 +173,11 @@
 			isa = PBXGroup;
 			children = (
 				EA20AD9C2B86414F00F6D33D /* WeightModuleBuilder.swift */,
-				EA20AD9A2B86407600F6D33D /* WeightPresenter.swift */,
 				EA2853552BD28FBA00A928F3 /* WeightModel.swift */,
+				EA20AD9A2B86407600F6D33D /* WeightPresenter.swift */,
 				EA20AD982B863FBA00F6D33D /* WeightViewController.swift */,
 				EA20AD9E2B8641EE00F6D33D /* WeightStoryboard.storyboard */,
+				EA4B31102BD53BA000FF1E84 /* Chart.swift */,
 			);
 			path = Weight;
 			sourceTree = "<group>";
@@ -194,7 +198,7 @@
 		EA2853522BD2882900A928F3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				EAC683BA2BCD6B910030FC3A /* UserDefaultsManager.swift */,
+				EAC683BA2BCD6B910030FC3A /* AppFileManager.swift */,
 				EA2853532BD2885600A928F3 /* RefreshTokenManager.swift */,
 			);
 			path = Shared;
@@ -279,6 +283,9 @@
 			dependencies = (
 			);
 			name = HealthAssistant;
+			packageProductDependencies = (
+				EA2853582BD5235300A928F3 /* DGCharts */,
+			);
 			productName = HealthAssistant;
 			productReference = EA20AD7D2B863A5300F6D33D /* HealthAssistant.app */;
 			productType = "com.apple.product-type.application";
@@ -307,6 +314,9 @@
 				Base,
 			);
 			mainGroup = EA20AD742B863A5300F6D33D;
+			packageReferences = (
+				EA2853572BD5235300A928F3 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = EA20AD7E2B863A5300F6D33D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,11 +359,12 @@
 				EAA8D1E92BB5B80D0098B015 /* SignInPresenter.swift in Sources */,
 				EA20AD992B863FBA00F6D33D /* WeightViewController.swift in Sources */,
 				EAA8D1F42BB5BCDE0098B015 /* SplashPresener.swift in Sources */,
+				EA4B31112BD53BA000FF1E84 /* Chart.swift in Sources */,
 				EA0B322E2BC856FB00723D1E /* UIViewControllerExtension.swift in Sources */,
 				EA20ADA22B8645E100F6D33D /* SettingsViewController.swift in Sources */,
 				EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */,
 				EA20ADA62B8646B400F6D33D /* SettingsPresenter.swift in Sources */,
-				EAC683BB2BCD6B910030FC3A /* UserDefaultsManager.swift in Sources */,
+				EAC683BB2BCD6B910030FC3A /* AppFileManager.swift in Sources */,
 				EAC683BE2BCD70CD0030FC3A /* AddWeightViewController.swift in Sources */,
 				EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */,
 				EA20AD812B863A5300F6D33D /* AppDelegate.swift in Sources */,
@@ -585,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA2853572BD5235300A928F3 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA2853582BD5235300A928F3 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA2853572BD5235300A928F3 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA20AD752B863A5300F6D33D /* Project object */;
 }

@@ -13,15 +13,17 @@ final class Chart {
     
     lazy var view: LineChartView = {
         let chartView = LineChartView()
-        chartView.rightAxis.enabled = true
+        chartView.rightAxis.enabled = false
         chartView.leftAxis.enabled = true
         chartView.leftAxis.labelTextColor = .white
-        chartView.leftAxis.axisLineColor = .white
-        chartView.drawGridBackgroundEnabled = true
-        chartView.xAxis.enabled = true
-        chartView.legend.enabled = true
-        chartView.scaleXEnabled = true
-        chartView.scaleYEnabled = true
+        chartView.leftAxis.labelFont = UIFont.systemFont(ofSize: 15, weight: .medium)
+//        chartView.leftAxis.labelXOffset =
+//        chartView.leftAxis.axisLineColor = .white
+        chartView.drawGridBackgroundEnabled = false
+        chartView.xAxis.enabled = false
+        chartView.legend.enabled = false
+        chartView.scaleXEnabled = false
+        chartView.scaleYEnabled = false
         return chartView
     }()
     
@@ -31,12 +33,18 @@ final class Chart {
     public func setupChart(with_ arrayValues: [Double]){
         dataSet = LineChartDataSet(entries: makeArrayEntriesFromValues(from: arrayValues))
         dataSet.drawCirclesEnabled = true
-        dataSet.drawValuesEnabled = true
+        dataSet.drawValuesEnabled = false
+        dataSet.circleColors = [.white]
         dataSet.mode = .cubicBezier
-        dataSet.lineWidth = 2
+        dataSet.lineWidth = 3
         dataSet.colors = [UIColor.white]
-        dataSet.drawHorizontalHighlightIndicatorEnabled = true
-        dataSet.drawVerticalHighlightIndicatorEnabled = false
+        dataSet.drawHorizontalHighlightIndicatorEnabled = false
+        dataSet.drawVerticalHighlightIndicatorEnabled = true
+        dataSet.highlightColor = .white.withAlphaComponent(0.5)
+        dataSet.highlightLineWidth = 1.5
+        self.view.data = LineChartData(dataSet: dataSet)
+        self.view.animate(xAxisDuration: 0)
+        self.view.highlightValue(x: Double(arrayValues.count - 1), dataSetIndex: 0)
     }
     
     private func makeArrayEntriesFromValues(from values: [Double]) -> [ChartDataEntry] {

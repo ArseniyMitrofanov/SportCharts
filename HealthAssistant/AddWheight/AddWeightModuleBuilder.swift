@@ -17,6 +17,8 @@ enum AddWeightModuleBuilder {
         }
         let presenter = AddWeightPresenter(viewController: viewController)
         viewController.presenter = presenter
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .coverVertical
         return viewController
     }
 }

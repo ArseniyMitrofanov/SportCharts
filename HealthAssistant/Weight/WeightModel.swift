@@ -7,11 +7,11 @@
 
 import Foundation
 struct WeightModel: Codable {
-    let value: Int
-    let date: String
+    let weight: Int
+    let dateTime: String
     
-    init(value: Int, date: String) {
-        self.value = value
-        self.date = date
+    init(weight: Int, dateTime: String) {
+        self.weight = weight
+        self.dateTime = dateTime
     }
 }
