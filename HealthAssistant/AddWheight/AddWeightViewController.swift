@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol IAddWeightViewController: AnyObject {
+    func showSignIn()
     func selfDismiss()
     func setDateLabelText(_ text: String)
 }
@@ -37,6 +38,10 @@ final class AddWeightViewController: UIViewController {
 }
 
 extension AddWeightViewController: IAddWeightViewController {
+    func showSignIn() {
+        self.navigationController?.viewControllers = [SignInModuleBuilder.setupModule()]
+    }
+    
     func setDateLabelText(_ text: String) {
         self.dateLabel.text = text
     }

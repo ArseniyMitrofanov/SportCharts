@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct WeightModel {
+struct WeightModel: Codable {
     let value: Int
     let date: String
     

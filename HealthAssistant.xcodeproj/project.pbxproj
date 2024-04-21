@@ -25,6 +25,7 @@
 		EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20ADA72B86476900F6D33D /* SettingsModuleBuilder.swift */; };
 		EA2853542BD2885600A928F3 /* RefreshTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2853532BD2885600A928F3 /* RefreshTokenManager.swift */; };
 		EA2853562BD28FBA00A928F3 /* WeightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2853552BD28FBA00A928F3 /* WeightModel.swift */; };
+		EA2853592BD5235300A928F3 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = EA2853582BD5235300A928F3 /* DGCharts */; };
 		EA3FBDBC2BAD8BEC00D17230 /* WhiteBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBB2BAD8BEC00D17230 /* WhiteBorderButton.swift */; };
 		EA3FBDBE2BAD927A00D17230 /* SettingsContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDBD2BAD927A00D17230 /* SettingsContentModel.swift */; };
 		EA3FBDC22BAD985100D17230 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FBDC02BAD985100D17230 /* SettingsTableViewCell.swift */; };

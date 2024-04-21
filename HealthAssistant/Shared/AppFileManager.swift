@@ -7,13 +7,18 @@
 
 import Foundation
 
-final class UserDefaultsManager {
-    static let shared = UserDefaultsManager()
+final class AppFileManager {
+    static let shared = AppFileManager()
     private init() {}
     
     func saveTokens(tokens: Tokens) {
         UserDefaults.standard.setValue(tokens.accessToken, forKey: "accessToken")
         UserDefaults.standard.setValue(tokens.token, forKey: "refreshToken")
+    }
+    
+    func deleteTokens() {
+        UserDefaults.standard.setValue(nil, forKey: "accessToken")
+        UserDefaults.standard.setValue(nil, forKey: "refreshToken")
     }
     
     func getTokens() -> Tokens? {
@@ -22,5 +27,9 @@ final class UserDefaultsManager {
             return Tokens(accessToken: accessToken, token: refreshToken)
         }
         return nil
+    }
+    
+    func saveNewWeightArray(_ array: [WeightModel]) {
+        Filem
     }
 }

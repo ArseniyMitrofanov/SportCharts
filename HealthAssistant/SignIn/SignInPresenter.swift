@@ -57,13 +57,12 @@ private extension SignInPresenter {
                     print(error?.localizedDescription ?? "No data")
                     return
                 }
-                let decoder = JSONDecoder()
-                let tokens = try? decoder.decode(Tokens.self, from: data)
+                let tokens = try? JSONDecoder().decode(Tokens.self, from: data)
                 let httpResponse = response as! HTTPURLResponse
                 print("SIGN IN STATUS : \(httpResponse.statusCode)")
                 if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) && tokens != nil{
                     print("Success")
-                    UserDefaultsManager.shared.saveTokens(tokens: tokens!)
+                    AppFileManager.shared.saveTokens(tokens: tokens!)
                     DispatchQueue.main.async {
                         self.viewController.showTabbar()
                     }

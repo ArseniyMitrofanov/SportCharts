@@ -19,7 +19,7 @@ final class SplashPresenter: ISplashPresenter {
     }
     
     func viewDidLoad() {
-        if let tokens = UserDefaultsManager.shared.getTokens() {
+        if let tokens = AppFileManager.shared.getTokens() {
             RefreshTokenManager.shared.updateTokens(with: tokens.token) { result in
                 if result {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:  { [weak self] in
@@ -27,6 +27,7 @@ final class SplashPresenter: ISplashPresenter {
                         self.viewController.presentTabbar()
                     })
                 }else {
+                    AppFileManager.shared.deleteTokens()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:  { [weak self] in
                         guard let self = self else {return}
                         self.viewController.presentSignIn()

@@ -37,6 +37,7 @@ final class SettingsPresenter: ISettingsPresenter {
 
 private extension SettingsPresenter {
     func signOut() {
+        AppFileManager.shared.deleteTokens()
         self.viewController.showSignInScreen()
     }
 }
