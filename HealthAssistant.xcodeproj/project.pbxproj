@@ -35,6 +35,10 @@
 		EA4B31162BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4B31152BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard */; };
 		EA4B31182BD5700A00FF1E84 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31172BD5700A00FF1E84 /* ForgotPasswordPresenter.swift */; };
 		EA4B311A2BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31192BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift */; };
+		EA4B311D2BD5B54F00FF1E84 /* AdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B311C2BD5B54F00FF1E84 /* AdviceViewController.swift */; };
+		EA4B31212BD5B5D900FF1E84 /* AdvicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31202BD5B5D900FF1E84 /* AdvicePresenter.swift */; };
+		EA4B31232BD5B70100FF1E84 /* AdviceModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31222BD5B70100FF1E84 /* AdviceModuleBuilder.swift */; };
+		EA4B31252BD5B84D00FF1E84 /* AdviceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4B31242BD5B84D00FF1E84 /* AdviceStoryboard.storyboard */; };
 		EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */; };
 		EAA847802BBDD57E0059E281 /* CreateAccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */; };
 		EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */; };
@@ -84,6 +88,10 @@
 		EA4B31152BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordStoryboard.storyboard; sourceTree = "<group>"; };
 		EA4B31172BD5700A00FF1E84 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		EA4B31192BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModuleBuilder.swift; sourceTree = "<group>"; };
+		EA4B311C2BD5B54F00FF1E84 /* AdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewController.swift; sourceTree = "<group>"; };
+		EA4B31202BD5B5D900FF1E84 /* AdvicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicePresenter.swift; sourceTree = "<group>"; };
+		EA4B31222BD5B70100FF1E84 /* AdviceModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceModuleBuilder.swift; sourceTree = "<group>"; };
+		EA4B31242BD5B84D00FF1E84 /* AdviceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdviceStoryboard.storyboard; sourceTree = "<group>"; };
 		EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccountStoryboard.storyboard; sourceTree = "<group>"; };
 		EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
@@ -161,6 +169,7 @@
 				EA20ADA02B8645B400F6D33D /* Settings */,
 				EA20AD972B863F5A00F6D33D /* Weight */,
 				EAC683BC2BCD70AF0030FC3A /* AddWheight */,
+				EA4B311B2BD5B52F00FF1E84 /* Advice */,
 				EA3FBDBA2BAD8BC000D17230 /* UI */,
 				EA0B322B2BC8569E00723D1E /* Helpers */,
 				EA20AD892B863A5600F6D33D /* Assets.xcassets */,
@@ -240,6 +249,17 @@
 				EA4B31152BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard */,
 			);
 			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		EA4B311B2BD5B52F00FF1E84 /* Advice */ = {
+			isa = PBXGroup;
+			children = (
+				EA4B31222BD5B70100FF1E84 /* AdviceModuleBuilder.swift */,
+				EA4B31202BD5B5D900FF1E84 /* AdvicePresenter.swift */,
+				EA4B311C2BD5B54F00FF1E84 /* AdviceViewController.swift */,
+				EA4B31242BD5B84D00FF1E84 /* AdviceStoryboard.storyboard */,
+			);
+			path = Advice;
 			sourceTree = "<group>";
 		};
 		EAA8477C2BBDD4D00059E281 /* CreateAccount */ = {
@@ -356,6 +376,7 @@
 				EA20ADA42B86467600F6D33D /* SettingsStoryboard.storyboard in Resources */,
 				EA3FBDC32BAD985100D17230 /* SettingsTableViewCell.xib in Resources */,
 				EAA8D1F22BB5BCB00098B015 /* SplashStoryboard.storyboard in Resources */,
+				EA4B31252BD5B84D00FF1E84 /* AdviceStoryboard.storyboard in Resources */,
 				EA4B31162BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard in Resources */,
 				EAC683C02BCD714C0030FC3A /* AddWeightStoryboard.storyboard in Resources */,
 				EAA8D1EB2BB5B8AA0098B015 /* SignInStoryboard.storyboard in Resources */,
@@ -382,6 +403,7 @@
 				EAA8D1E92BB5B80D0098B015 /* SignInPresenter.swift in Sources */,
 				EA20AD992B863FBA00F6D33D /* WeightViewController.swift in Sources */,
 				EAA8D1F42BB5BCDE0098B015 /* SplashPresener.swift in Sources */,
+				EA4B31212BD5B5D900FF1E84 /* AdvicePresenter.swift in Sources */,
 				EA4B31112BD53BA000FF1E84 /* Chart.swift in Sources */,
 				EA0B322E2BC856FB00723D1E /* UIViewControllerExtension.swift in Sources */,
 				EA20ADA22B8645E100F6D33D /* SettingsViewController.swift in Sources */,
@@ -390,8 +412,10 @@
 				EAC683BB2BCD6B910030FC3A /* AppFileManager.swift in Sources */,
 				EAC683BE2BCD70CD0030FC3A /* AddWeightViewController.swift in Sources */,
 				EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */,
+				EA4B31232BD5B70100FF1E84 /* AdviceModuleBuilder.swift in Sources */,
 				EA20AD812B863A5300F6D33D /* AppDelegate.swift in Sources */,
 				EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */,
+				EA4B311D2BD5B54F00FF1E84 /* AdviceViewController.swift in Sources */,
 				EA4B311A2BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift in Sources */,
 				EAC683C42BCD738A0030FC3A /* AddWeightModuleBuilder.swift in Sources */,
 				EAA847842BBDD8A70059E281 /* CreateAccountModuleBuilder.swift in Sources */,

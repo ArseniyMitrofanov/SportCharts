@@ -3,7 +3,7 @@
 //  HealthAssistant
 //
 //  Created by Арсений on 21.02.24.
-//
+// NUTRITION, EXERCISE
 
 import UIKit
 

@@ -53,22 +53,27 @@ private extension TabbarController {
     
     func fillTabBar() {
         let weightViewController = WeightModuleBuilder.setupModule()
-        let adviseViewController = WeightModuleBuilder.setupModule()
+        let nutritionViewController = AdviceModuleBuilder.setupModule(type: .nutrition)
+        let exerciseViewController = AdviceModuleBuilder.setupModule(type: .exercise)
         let settingsViewController = SettingsModuleBuilder.setupModule()
         
+        
         weightViewController.tabBarItem = UITabBarItem(title: "",
-                                                       image: UIImage(systemName: "chart.line.downtrend.xyaxis.circle.fill"),
+                                                       image: UIImage(systemName: "chart.xyaxis.line"),
                                                        tag: 0)
-        //потом его напишу - пока так чисто глянуть иконки
-        adviseViewController.tabBarItem = UITabBarItem(title: "",
-                                                       image: UIImage(systemName: "book.fill"),
+        nutritionViewController.tabBarItem = UITabBarItem(title: "",
+                                                       image: UIImage(systemName: "fork.knife"),
                                                        tag: 1)
+        
+        exerciseViewController.tabBarItem = UITabBarItem(title: "",
+                                                       image: UIImage(systemName: "dumbbell.fill"),
+                                                       tag: 2)
         
         settingsViewController.tabBarItem = UITabBarItem(title: "",
                                                          image: UIImage(systemName: "gearshape.fill"),
-                                                         tag: 2)
+                                                         tag: 3)
         
-        self.viewControllers = [weightViewController, adviseViewController, settingsViewController]
+        self.viewControllers = [weightViewController, nutritionViewController, exerciseViewController, settingsViewController]
         self.selectedIndex = 0
     }
 }
