@@ -173,7 +173,6 @@
 				EA3FBDBA2BAD8BC000D17230 /* UI */,
 				EA0B322B2BC8569E00723D1E /* Helpers */,
 				EA20AD892B863A5600F6D33D /* Assets.xcassets */,
-				EA20AD8B2B863A5600F6D33D /* LaunchScreen.storyboard */,
 				EA20AD8E2B863A5600F6D33D /* Info.plist */,
 			);
 			path = HealthAssistant;
@@ -292,6 +291,7 @@
 				EAA8D1F32BB5BCDE0098B015 /* SplashPresener.swift */,
 				EAA8D1EF2BB5BC470098B015 /* SplashViewController.swift */,
 				EAA8D1F12BB5BCB00098B015 /* SplashStoryboard.storyboard */,
+				EA20AD8B2B863A5600F6D33D /* LaunchScreen.storyboard */,
 			);
 			path = Splash;
 			sourceTree = "<group>";

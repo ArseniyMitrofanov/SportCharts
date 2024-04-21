@@ -95,10 +95,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGb-zh-LPO">
+                                <rect key="frame" x="159.33333333333334" y="89" width="74.333333333333343" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Backgroud"/>
                         <constraints>
+                            <constraint firstItem="KGb-zh-LPO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FUz-v2-37u"/>
+                            <constraint firstItem="KGb-zh-LPO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="Nff-gA-J5J"/>
                             <constraint firstItem="bD8-Gq-TXS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="SCI-DW-ST0"/>
                             <constraint firstItem="bD8-Gq-TXS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="SZ5-md-2me"/>
                             <constraint firstItem="bD8-Gq-TXS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="jf6-hJ-otQ"/>

@@ -24,11 +24,19 @@
                                     <constraint firstAttribute="width" constant="320" id="ayJ-uM-fj7"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Assistant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffn-S9-Bvp">
+                                <rect key="frame" x="88.333333333333329" y="200" width="216.66666666666669" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Backgroud"/>
                         <constraints>
                             <constraint firstItem="CXb-hq-sr6" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="E8N-hH-kiF"/>
+                            <constraint firstItem="ffn-S9-Bvp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="TMN-lp-h6h"/>
+                            <constraint firstItem="CXb-hq-sr6" firstAttribute="top" secondItem="ffn-S9-Bvp" secondAttribute="bottom" constant="60" id="Zfc-lV-QHK"/>
                             <constraint firstItem="CXb-hq-sr6" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="xCV-v7-cEl"/>
                         </constraints>
                     </view>

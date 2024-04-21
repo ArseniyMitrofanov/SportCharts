@@ -128,14 +128,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Создать" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnN-fe-lRu">
+                                <rect key="frame" x="145" y="89" width="103" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Backgroud"/>
                         <constraints>
                             <constraint firstItem="pIp-sL-YED" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="EEd-4y-9VW"/>
                             <constraint firstItem="pIp-sL-YED" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="T5f-UR-N5c"/>
+                            <constraint firstItem="pnN-fe-lRu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="YL9-0V-Ztv"/>
                             <constraint firstItem="pIp-sL-YED" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="aBU-86-Nsi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pIp-sL-YED" secondAttribute="trailing" constant="50" id="ftY-LP-dmq"/>
+                            <constraint firstItem="pnN-fe-lRu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="oGO-LP-9Qm"/>
                             <constraint firstItem="4cX-LY-OcG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="qxn-q6-5Z0"/>
                             <constraint firstItem="4cX-LY-OcG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="uiP-sP-beN"/>
                         </constraints>
