@@ -96,7 +96,7 @@ extension ForgotPasswordPresenter {
     }
     
     func sendNewPassword(_ password: String) {
-        if let url = URL(string:  "https://healthassistant-production.up.railway.app/api/v1.0/auth/verify-reset-code") {
+        if let url = URL(string:  "https://healthassistant-production.up.railway.app/api/v1.0/auth/reset-password") {
             let json: [String: Any] = ["username": self.email, "password": password, "code": self.key ]
             let jsonData = try? JSONSerialization.data(withJSONObject: json)
             var urlRequest = URLRequest(url: url)
@@ -111,8 +111,8 @@ extension ForgotPasswordPresenter {
                     return
                 }
                 if let jsonString = String(data: data, encoding: .utf8) {
-                       print("Received JSON: \(jsonString)")
-                   }
+                    print("Received JSON: \(jsonString)")
+                }
                 
                 let tokens = try? JSONDecoder().decode(Tokens.self, from: data)
                 let httpResponse = response as! HTTPURLResponse

@@ -24,7 +24,7 @@ final class CreateAccountPresenter: ICreateAccountPresenter {
     func backButtonTouchupInside() {
         self.viewController.selfDismiss()
     }
-
+    
     func createButtonTouchUpInside() {
         
         if !self.hasSentKey {
@@ -84,7 +84,7 @@ private extension CreateAccountPresenter {
             urlRequest.httpMethod = "POST"
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.httpBody = jsonData
-
+            
             URLSession.shared.dataTask(with: urlRequest) {[weak self] data, response, error in
                 guard let self = self else {return}
                 guard let _ = data, error == nil else {

@@ -17,8 +17,8 @@ final class Chart {
         chartView.leftAxis.enabled = true
         chartView.leftAxis.labelTextColor = .white
         chartView.leftAxis.labelFont = UIFont.systemFont(ofSize: 15, weight: .medium)
-//        chartView.leftAxis.labelXOffset =
-//        chartView.leftAxis.axisLineColor = .white
+        //        chartView.leftAxis.labelXOffset =
+        //        chartView.leftAxis.axisLineColor = .white
         chartView.drawGridBackgroundEnabled = false
         chartView.xAxis.enabled = false
         chartView.legend.enabled = false
@@ -29,7 +29,7 @@ final class Chart {
     
     private var arrayValues = [ChartDataEntry]()
     private var dataSet = LineChartDataSet()
-        
+    
     public func setupChart(with_ arrayValues: [Double]){
         dataSet = LineChartDataSet(entries: makeArrayEntriesFromValues(from: arrayValues))
         dataSet.drawCirclesEnabled = true

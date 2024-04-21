@@ -13,7 +13,7 @@ protocol IWeightPreesenter {
     func viewDidAppear()
     func didSelectValue(at index: Int)
     var arrayWeightModels: [WeightModel] {get}
-
+    
 }
 
 final class WeightPresenter: IWeightPreesenter {

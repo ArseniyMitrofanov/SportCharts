@@ -26,8 +26,8 @@ final class SignInPresenter: ISignInPresenter {
         if Validator.email(from: emailText) {
             let passwordText = self.viewController.passwordText()
             if Validator.password(from: passwordText) {
-                        let request = AuthorizationRequest(email: emailText!, password: passwordText!)
-                        self.sendSignInRequest(request: request)
+                let request = AuthorizationRequest(email: emailText!, password: passwordText!)
+                self.sendSignInRequest(request: request)
             }else {
                 self.viewController.showAlert(title: "Неверно заполнено поле пароль", message: "Пароль может содержать только латинские буквы, цифры и специальные символы")
             }
@@ -60,7 +60,7 @@ private extension SignInPresenter {
             urlRequest.httpMethod = "POST"
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.httpBody = jsonData
-
+            
             URLSession.shared.dataTask(with: urlRequest) {[weak self] data, response, error in
                 guard let self = self else {return}
                 guard let data = data, error == nil else {

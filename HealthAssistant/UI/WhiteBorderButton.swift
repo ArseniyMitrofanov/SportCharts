@@ -16,7 +16,7 @@ final class WhiteBorderButton: UIButton {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-       makeCustomAppearance()
+        makeCustomAppearance()
     }
     
     private func makeCustomAppearance() {

@@ -48,7 +48,7 @@ private extension TabbarController {
         self.whiteBackgroudView.layer.cornerRadius = 20
         self.view.addSubview(self.whiteBackgroudView)
         self.view.bringSubviewToFront(self.tabBar)
-               
+        
     }
     
     func fillTabBar() {
@@ -67,7 +67,7 @@ private extension TabbarController {
         settingsViewController.tabBarItem = UITabBarItem(title: "",
                                                          image: UIImage(systemName: "gearshape.fill"),
                                                          tag: 2)
-     
+        
         self.viewControllers = [weightViewController, adviseViewController, settingsViewController]
         self.selectedIndex = 0
     }

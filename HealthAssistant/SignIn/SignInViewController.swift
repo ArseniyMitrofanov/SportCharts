@@ -47,7 +47,7 @@ extension SignInViewController: ISignInViewController {
     func showForgotPasswordScreen(email: String) {
         self.navigationController?.pushViewController(ForgotPasswordModuleBuilder.setupModule(email: email), animated: true)
     }
-  
+    
     func showAlert(title: String, message: String) {
         self.presentNativeAlert(title: title, message: message)
     }
