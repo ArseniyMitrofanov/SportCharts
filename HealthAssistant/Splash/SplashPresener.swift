@@ -28,6 +28,7 @@ final class SplashPresenter: ISplashPresenter {
                     })
                 }else {
                     AppFileManager.shared.deleteTokens()
+                    AppFileManager.shared.deleteWeightArray()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:  { [weak self] in
                         guard let self = self else {return}
                         self.viewController.presentSignIn()

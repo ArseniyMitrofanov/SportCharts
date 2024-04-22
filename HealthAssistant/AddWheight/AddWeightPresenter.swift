@@ -75,13 +75,16 @@ private extension AddWeightPresenter {
                     var arrayWeight = AppFileManager.shared.getWeightArray()
                     arrayWeight.append(weight)
                     AppFileManager.shared.saveNewWeightArray(arrayWeight)
-                }else if httpResponse.statusCode == 401 {
+                }else if httpResponse.statusCode == 403 {
                     RefreshTokenManager.shared.updateTokens(with: tokens.token) { result in
                         if result {
                             self.sendNewWeight()
                         }else {
                             AppFileManager.shared.deleteTokens()
-                            self.viewController.showSignIn()
+                            AppFileManager.shared.deleteWeightArray()
+                            DispatchQueue.main.async {
+                                self.viewController.showSignIn()
+                            }
                         }
                     }
                 }else {

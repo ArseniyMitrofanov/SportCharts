@@ -74,7 +74,7 @@ extension WeightViewController: IWeightViewController {
     func showSignIn() {
         self.navigationController?.viewControllers = [SignInModuleBuilder.setupModule()]
         AppFileManager.shared.deleteTokens()
-        
+        AppFileManager.shared.deleteWeightArray()
     }
     
     func showAddWheightScreen() {

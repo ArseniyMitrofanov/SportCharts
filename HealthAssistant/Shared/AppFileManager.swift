@@ -49,4 +49,14 @@ final class AppFileManager {
         }
         return weightArray
     }
+    
+    func deleteWeightArray() {
+        var array: [WeightModel] = []
+        do{
+            let json = try JSONEncoder().encode(array)
+            try json.write(to: weightArrayFileUrl)
+        }catch {
+            print(error.localizedDescription)
+        }
+    }
 }

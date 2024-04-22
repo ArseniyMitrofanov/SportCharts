@@ -7,9 +7,11 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 protocol ISettingsViewController: AnyObject {
     func showSignInScreen()
+    func presentEmailAlert()
 }
 
 final class SettingsViewController: UIViewController {
@@ -48,7 +50,28 @@ extension SettingsViewController: ISettingsViewController {
         self.navigationController?.viewControllers = [SignInModuleBuilder.setupModule()]
     }
     
-    
+    func presentEmailAlert() {
+        let recipient: String = "arseniy.mitrafanau@gmail.com"
+        let messageBody: String = ""
+       
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([recipient])
+            mail.setMessageBody(messageBody, isHTML: true)
+            present(mail, animated: true)
+        } else {
+            let alert = UIAlertController(title: "", message: "Напишите нам на почту:" + "\n\(recipient)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ок", style: .default))
+            present(alert, animated: true)
+        }
+    }
+}
+
+extension SettingsViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
 }
 
 private extension SettingsViewController {

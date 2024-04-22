@@ -87,12 +87,13 @@ private extension WeightPresenter {
                     self.arrayWeightModels = weightArray ?? []
                     self.checkForData()
                     self.viewController.drawChart(with: weightArray!.map({Double($0.weight)}))
-                } else if httpResponse.statusCode == 401 {
+                } else if httpResponse.statusCode == 403 {
                     RefreshTokenManager.shared.updateTokens(with: tokens.token) { result in
                         if result {
                             self.fetchWeightArray()
                         }else {
                             AppFileManager.shared.deleteTokens()
+                            AppFileManager.shared.deleteWeightArray()
                             self.viewController.showSignIn()
                         }
                     }
