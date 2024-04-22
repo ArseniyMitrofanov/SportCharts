@@ -30,6 +30,7 @@ final class ForgotPasswordPresenter: IForgotPasswordPresenter {
     
     func nextButtonTouchUpInside() {
         if !didvalidateKey {
+            FirebaseManager.logEvent("forgotContinueTapped")
             let key = self.viewController.keyText()
             if Validator.key(from: key) {
                 self.key = key!
@@ -38,6 +39,7 @@ final class ForgotPasswordPresenter: IForgotPasswordPresenter {
                 viewController.showAlert(title: "Неверно заполнено поле ключ", message: "Ключ должен содержать только 6 цыфр")
             }
         }else {
+            FirebaseManager.logEvent("forgotChangeTapped")
             let passwordText = self.viewController.passwordText()
             if Validator.password(from: passwordText) {
                 let repeatPasswordText = self.viewController.repeatPasswordText()
@@ -57,6 +59,7 @@ final class ForgotPasswordPresenter: IForgotPasswordPresenter {
     }
     
     func backButtonTouchUpInside() {
+        FirebaseManager.logEvent("forgotBackTapped")
         self.viewController.selfDismiss()
     }
 }

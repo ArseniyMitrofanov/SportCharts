@@ -26,10 +26,18 @@ final class SettingsPresenter: ISettingsPresenter {
     
     func didSelectCell(at indexPath: IndexPath) {
         switch indexPath.row {
-        case 0: self.rateUs()
-        case 1: self.privacyPolicy()
-        case 2: self.viewController.presentEmailAlert()
-        case 3: self.signOut()
+        case 0:
+            self.rateUs()
+            FirebaseManager.logEvent("settingsRateTapped")
+        case 1:
+            self.privacyPolicy()
+            FirebaseManager.logEvent("settingsPrivacyTapped")
+        case 2:
+            self.viewController.presentEmailAlert()
+            FirebaseManager.logEvent("settingsEmailTapped")
+        case 3:
+            self.signOut()
+            FirebaseManager.logEvent("settingsSignOutTapped")
         default: print("error: index out of range")
             self.signOut()
         }

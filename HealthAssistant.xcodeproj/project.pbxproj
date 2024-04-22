@@ -46,6 +46,12 @@
 		EA5FDFA62BD69CEE00B736AD /* AdviceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FDFA52BD69CEE00B736AD /* AdviceDetailPresenter.swift */; };
 		EA5FDFA82BD69CFE00B736AD /* AdviceDetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FDFA72BD69CFE00B736AD /* AdviceDetailModuleBuilder.swift */; };
 		EA5FDFAA2BD69D0800B736AD /* AdviceDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5FDFA92BD69D0800B736AD /* AdviceDetailStoryboard.storyboard */; };
+		EA5FDFAD2BD6DEC300B736AD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EA5FDFAC2BD6DEC300B736AD /* FirebaseAnalytics */; };
+		EA5FDFAF2BD6DEC300B736AD /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = EA5FDFAE2BD6DEC300B736AD /* FirebaseAnalyticsOnDeviceConversion */; };
+		EA5FDFB12BD6DEC300B736AD /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EA5FDFB02BD6DEC300B736AD /* FirebaseAnalyticsSwift */; };
+		EA5FDFB32BD6DEC300B736AD /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = EA5FDFB22BD6DEC300B736AD /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		EA5FDFB52BD6DEDC00B736AD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FDFB42BD6DEDC00B736AD /* FirebaseManager.swift */; };
+		EA5FDFB72BD6E08A00B736AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA5FDFB62BD6E08A00B736AD /* GoogleService-Info.plist */; };
 		EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */; };
 		EAA847802BBDD57E0059E281 /* CreateAccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */; };
 		EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */; };
@@ -106,6 +112,8 @@
 		EA5FDFA52BD69CEE00B736AD /* AdviceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDetailPresenter.swift; sourceTree = "<group>"; };
 		EA5FDFA72BD69CFE00B736AD /* AdviceDetailModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDetailModuleBuilder.swift; sourceTree = "<group>"; };
 		EA5FDFA92BD69D0800B736AD /* AdviceDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdviceDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		EA5FDFB42BD6DEDC00B736AD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		EA5FDFB62BD6E08A00B736AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccountStoryboard.storyboard; sourceTree = "<group>"; };
 		EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
@@ -130,6 +138,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5FDFB12BD6DEC300B736AD /* FirebaseAnalyticsSwift in Frameworks */,
+				EA5FDFB32BD6DEC300B736AD /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				EA5FDFAD2BD6DEC300B736AD /* FirebaseAnalytics in Frameworks */,
+				EA5FDFAF2BD6DEC300B736AD /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				EA2853592BD5235300A928F3 /* DGCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +201,7 @@
 				EA0B322B2BC8569E00723D1E /* Helpers */,
 				EA20AD892B863A5600F6D33D /* Assets.xcassets */,
 				EA20AD8E2B863A5600F6D33D /* Info.plist */,
+				EA5FDFB62BD6E08A00B736AD /* GoogleService-Info.plist */,
 			);
 			path = HealthAssistant;
 			sourceTree = "<group>";
@@ -232,6 +245,7 @@
 			children = (
 				EAC683BA2BCD6B910030FC3A /* AppFileManager.swift */,
 				EA2853532BD2885600A928F3 /* RefreshTokenManager.swift */,
+				EA5FDFB42BD6DEDC00B736AD /* FirebaseManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -362,6 +376,10 @@
 			name = HealthAssistant;
 			packageProductDependencies = (
 				EA2853582BD5235300A928F3 /* DGCharts */,
+				EA5FDFAC2BD6DEC300B736AD /* FirebaseAnalytics */,
+				EA5FDFAE2BD6DEC300B736AD /* FirebaseAnalyticsOnDeviceConversion */,
+				EA5FDFB02BD6DEC300B736AD /* FirebaseAnalyticsSwift */,
+				EA5FDFB22BD6DEC300B736AD /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = HealthAssistant;
 			productReference = EA20AD7D2B863A5300F6D33D /* HealthAssistant.app */;
@@ -393,6 +411,7 @@
 			mainGroup = EA20AD742B863A5300F6D33D;
 			packageReferences = (
 				EA2853572BD5235300A928F3 /* XCRemoteSwiftPackageReference "Charts" */,
+				EA5FDFAB2BD6DEC300B736AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = EA20AD7E2B863A5300F6D33D /* Products */;
 			projectDirPath = "";
@@ -421,6 +440,7 @@
 				EAA8D1EB2BB5B8AA0098B015 /* SignInStoryboard.storyboard in Resources */,
 				EA20AD8A2B863A5600F6D33D /* Assets.xcassets in Resources */,
 				EAA847802BBDD57E0059E281 /* CreateAccountStoryboard.storyboard in Resources */,
+				EA5FDFB72BD6E08A00B736AD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +474,7 @@
 				EAC683BB2BCD6B910030FC3A /* AppFileManager.swift in Sources */,
 				EAC683BE2BCD70CD0030FC3A /* AddWeightViewController.swift in Sources */,
 				EA20ADA82B86476900F6D33D /* SettingsModuleBuilder.swift in Sources */,
+				EA5FDFB52BD6DEDC00B736AD /* FirebaseManager.swift in Sources */,
 				EA4B31232BD5B70100FF1E84 /* AdviceModuleBuilder.swift in Sources */,
 				EA20AD812B863A5300F6D33D /* AppDelegate.swift in Sources */,
 				EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */,
@@ -698,6 +719,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		EA5FDFAB2BD6DEC300B736AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -705,6 +734,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EA2853572BD5235300A928F3 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGCharts;
+		};
+		EA5FDFAC2BD6DEC300B736AD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5FDFAB2BD6DEC300B736AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EA5FDFAE2BD6DEC300B736AD /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5FDFAB2BD6DEC300B736AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		EA5FDFB02BD6DEC300B736AD /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5FDFAB2BD6DEC300B736AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		EA5FDFB22BD6DEC300B736AD /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA5FDFAB2BD6DEC300B736AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

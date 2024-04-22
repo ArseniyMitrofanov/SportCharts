@@ -24,11 +24,13 @@ final class AddWeightPresenter: IAddWeightPresenter {
     }
     
     func addButtonTapped() {
+        FirebaseManager.logEvent("addWeightAddTapped", parameters: ["weight": self.selectedWeightValue])
         self.sendNewWeight()
         self.viewController.selfDismiss()
     }
     
     func backButtonTouhUpInside() {
+        FirebaseManager.logEvent("addWeightBackTapped")
         self.viewController.selfDismiss()
     }
     
@@ -74,6 +76,9 @@ private extension AddWeightPresenter {
                     print("Success")
                     var arrayWeight = AppFileManager.shared.getWeightArray()
                     arrayWeight.append(weight)
+                    if arrayWeight.count > 30 {
+                        arrayWeight.removeFirst()
+                    }
                     AppFileManager.shared.saveNewWeightArray(arrayWeight)
                 }else if httpResponse.statusCode == 403 {
                     RefreshTokenManager.shared.updateTokens(with: tokens.token) { result in

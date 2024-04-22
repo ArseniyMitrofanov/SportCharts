@@ -30,6 +30,7 @@ final class WeightPresenter: IWeightPreesenter {
     
     
     func addWheightButtonTapped() {
+        FirebaseManager.logEvent("weightAddTapped")
         self.viewController.showAddWheightScreen()
     }
     

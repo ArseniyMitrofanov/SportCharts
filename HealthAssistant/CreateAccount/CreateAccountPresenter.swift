@@ -22,14 +22,17 @@ final class CreateAccountPresenter: ICreateAccountPresenter {
     }
     
     func backButtonTouchupInside() {
+        FirebaseManager.logEvent("createAccountBackTapped")
         self.viewController.selfDismiss()
     }
     
     func createButtonTouchUpInside() {
         
         if !self.hasSentKey {
+            FirebaseManager.logEvent("createAccountContinueTapped")
             self.continueAction()
         }else {
+            FirebaseManager.logEvent("createAccountCreateTapped")
             self.createAction()
         }
     }

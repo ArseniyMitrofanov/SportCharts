@@ -21,6 +21,7 @@ final class SignInPresenter: ISignInPresenter {
     }
     
     func signInButtonTouchUpInside() {
+        FirebaseManager.logEvent("signInButtonTapped")
         self.viewController.endEditing()
         let emailText = self.viewController.emailText()
         if Validator.email(from: emailText) {
@@ -37,10 +38,12 @@ final class SignInPresenter: ISignInPresenter {
     }
     
     func createAccountTouchUpInside() {
+        FirebaseManager.logEvent("signInCreateTapped")
         self.viewController.showCreateAccountScreen()
     }
     
     func forgotPasswordButtonTapped() {
+        FirebaseManager.logEvent("signInForgotTapped")
         let emailText = self.viewController.emailText()
         if Validator.email(from: emailText) {
             self.sendForgotPasswordRequest(email: emailText!)

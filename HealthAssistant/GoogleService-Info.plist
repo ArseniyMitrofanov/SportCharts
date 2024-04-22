@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCcr5G82rouy-hFMbDToTZIJE-T0UPiK7g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>473926986409</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.arseniy.HealthAssistant</string>
+	<key>PROJECT_ID</key>
+	<string>healthassistant-ae5e0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>healthassistant-ae5e0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:473926986409:ios:cd1c3eb69db942013157b8</string>
+</dict>
+</plist>

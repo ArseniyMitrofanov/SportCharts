@@ -48,6 +48,7 @@ final class AdvicePresenter: IAdvicePresenter {
         if indexPath.row < arrayModel.count {
             let model = arrayModel[indexPath.row]
             self.viewController.showDetailScreen(type: self.type, model: model)
+            FirebaseManager.logEvent("adviceSelected", parameters: ["title": model.title])
         }
     }
 }
