@@ -11,6 +11,7 @@ import UIKit
 protocol IAdviceViewController: AnyObject {
     func setTitleText(_ text: String)
     func reloadTableView()
+    func showDetailScreen(type: AdviceType, model: Advice)
 }
 
 final class AdviceViewController: UIViewController {
@@ -28,6 +29,10 @@ final class AdviceViewController: UIViewController {
 }
 
 extension AdviceViewController: IAdviceViewController {
+    func showDetailScreen(type: AdviceType, model: Advice) {
+        self.present(AdviceDetailModuleBuilder.setupModule(type: type, model: model), animated: true)
+    }
+    
     func reloadTableView() {
         self.tableView.reloadData()
     }

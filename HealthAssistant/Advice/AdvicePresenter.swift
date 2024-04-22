@@ -45,7 +45,10 @@ final class AdvicePresenter: IAdvicePresenter {
     }
     
     func didSelectCell(at indexPath: IndexPath) {
-        
+        if indexPath.row < arrayModel.count {
+            let model = arrayModel[indexPath.row]
+            self.viewController.showDetailScreen(type: self.type, model: model)
+        }
     }
 }
 
