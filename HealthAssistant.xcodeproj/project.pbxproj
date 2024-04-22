@@ -39,6 +39,13 @@
 		EA4B31212BD5B5D900FF1E84 /* AdvicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31202BD5B5D900FF1E84 /* AdvicePresenter.swift */; };
 		EA4B31232BD5B70100FF1E84 /* AdviceModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B31222BD5B70100FF1E84 /* AdviceModuleBuilder.swift */; };
 		EA4B31252BD5B84D00FF1E84 /* AdviceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4B31242BD5B84D00FF1E84 /* AdviceStoryboard.storyboard */; };
+		EA5FDF9A2BD68B6E00B736AD /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FDF992BD68B6E00B736AD /* Advice.swift */; };
+		EA5FDFA02BD6992A00B736AD /* AdviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FDF9E2BD6992A00B736AD /* AdviceTableViewCell.swift */; };
+		EA5FDFA12BD6992A00B736AD /* AdviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5FDF9F2BD6992A00B736AD /* AdviceTableViewCell.xib */; };
+		EA5FDFA42BD69CE300B736AD /* AdviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FDFA32BD69CE300B736AD /* AdviceDetailViewController.swift */; };
+		EA5FDFA62BD69CEE00B736AD /* AdviceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FDFA52BD69CEE00B736AD /* AdviceDetailPresenter.swift */; };
+		EA5FDFA82BD69CFE00B736AD /* AdviceDetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FDFA72BD69CFE00B736AD /* AdviceDetailModuleBuilder.swift */; };
+		EA5FDFAA2BD69D0800B736AD /* AdviceDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5FDFA92BD69D0800B736AD /* AdviceDetailStoryboard.storyboard */; };
 		EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */; };
 		EAA847802BBDD57E0059E281 /* CreateAccountStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */; };
 		EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */; };
@@ -92,6 +99,13 @@
 		EA4B31202BD5B5D900FF1E84 /* AdvicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicePresenter.swift; sourceTree = "<group>"; };
 		EA4B31222BD5B70100FF1E84 /* AdviceModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceModuleBuilder.swift; sourceTree = "<group>"; };
 		EA4B31242BD5B84D00FF1E84 /* AdviceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdviceStoryboard.storyboard; sourceTree = "<group>"; };
+		EA5FDF992BD68B6E00B736AD /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		EA5FDF9E2BD6992A00B736AD /* AdviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceTableViewCell.swift; sourceTree = "<group>"; };
+		EA5FDF9F2BD6992A00B736AD /* AdviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdviceTableViewCell.xib; sourceTree = "<group>"; };
+		EA5FDFA32BD69CE300B736AD /* AdviceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDetailViewController.swift; sourceTree = "<group>"; };
+		EA5FDFA52BD69CEE00B736AD /* AdviceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDetailPresenter.swift; sourceTree = "<group>"; };
+		EA5FDFA72BD69CFE00B736AD /* AdviceDetailModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDetailModuleBuilder.swift; sourceTree = "<group>"; };
+		EA5FDFA92BD69D0800B736AD /* AdviceDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdviceDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccountStoryboard.storyboard; sourceTree = "<group>"; };
 		EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
@@ -170,6 +184,7 @@
 				EA20AD972B863F5A00F6D33D /* Weight */,
 				EAC683BC2BCD70AF0030FC3A /* AddWheight */,
 				EA4B311B2BD5B52F00FF1E84 /* Advice */,
+				EA5FDFA22BD69CB700B736AD /* AdviceDetail */,
 				EA3FBDBA2BAD8BC000D17230 /* UI */,
 				EA0B322B2BC8569E00723D1E /* Helpers */,
 				EA20AD892B863A5600F6D33D /* Assets.xcassets */,
@@ -254,11 +269,33 @@
 			isa = PBXGroup;
 			children = (
 				EA4B31222BD5B70100FF1E84 /* AdviceModuleBuilder.swift */,
+				EA5FDF992BD68B6E00B736AD /* Advice.swift */,
 				EA4B31202BD5B5D900FF1E84 /* AdvicePresenter.swift */,
 				EA4B311C2BD5B54F00FF1E84 /* AdviceViewController.swift */,
 				EA4B31242BD5B84D00FF1E84 /* AdviceStoryboard.storyboard */,
+				EA5FDF9D2BD6990F00B736AD /* AdviceTableViewCell */,
 			);
 			path = Advice;
+			sourceTree = "<group>";
+		};
+		EA5FDF9D2BD6990F00B736AD /* AdviceTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA5FDF9E2BD6992A00B736AD /* AdviceTableViewCell.swift */,
+				EA5FDF9F2BD6992A00B736AD /* AdviceTableViewCell.xib */,
+			);
+			path = AdviceTableViewCell;
+			sourceTree = "<group>";
+		};
+		EA5FDFA22BD69CB700B736AD /* AdviceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EA5FDFA72BD69CFE00B736AD /* AdviceDetailModuleBuilder.swift */,
+				EA5FDFA52BD69CEE00B736AD /* AdviceDetailPresenter.swift */,
+				EA5FDFA32BD69CE300B736AD /* AdviceDetailViewController.swift */,
+				EA5FDFA92BD69D0800B736AD /* AdviceDetailStoryboard.storyboard */,
+			);
+			path = AdviceDetail;
 			sourceTree = "<group>";
 		};
 		EAA8477C2BBDD4D00059E281 /* CreateAccount */ = {
@@ -378,6 +415,8 @@
 				EAA8D1F22BB5BCB00098B015 /* SplashStoryboard.storyboard in Resources */,
 				EA4B31252BD5B84D00FF1E84 /* AdviceStoryboard.storyboard in Resources */,
 				EA4B31162BD56F3E00FF1E84 /* ForgotPasswordStoryboard.storyboard in Resources */,
+				EA5FDFA12BD6992A00B736AD /* AdviceTableViewCell.xib in Resources */,
+				EA5FDFAA2BD69D0800B736AD /* AdviceDetailStoryboard.storyboard in Resources */,
 				EAC683C02BCD714C0030FC3A /* AddWeightStoryboard.storyboard in Resources */,
 				EAA8D1EB2BB5B8AA0098B015 /* SignInStoryboard.storyboard in Resources */,
 				EA20AD8A2B863A5600F6D33D /* Assets.xcassets in Resources */,
@@ -394,6 +433,7 @@
 			files = (
 				EA4B31142BD56F0B00FF1E84 /* ForgotPasswordViewController.swift in Sources */,
 				EA4B31182BD5700A00FF1E84 /* ForgotPasswordPresenter.swift in Sources */,
+				EA5FDFA42BD69CE300B736AD /* AdviceDetailViewController.swift in Sources */,
 				EA20AD9B2B86407600F6D33D /* WeightPresenter.swift in Sources */,
 				EAC683C22BCD72B50030FC3A /* AddWeightPresenter.swift in Sources */,
 				EA3FBDBC2BAD8BEC00D17230 /* WhiteBorderButton.swift in Sources */,
@@ -405,9 +445,11 @@
 				EAA8D1F42BB5BCDE0098B015 /* SplashPresener.swift in Sources */,
 				EA4B31212BD5B5D900FF1E84 /* AdvicePresenter.swift in Sources */,
 				EA4B31112BD53BA000FF1E84 /* Chart.swift in Sources */,
+				EA5FDF9A2BD68B6E00B736AD /* Advice.swift in Sources */,
 				EA0B322E2BC856FB00723D1E /* UIViewControllerExtension.swift in Sources */,
 				EA20ADA22B8645E100F6D33D /* SettingsViewController.swift in Sources */,
 				EAA847822BBDD5C20059E281 /* CreateAccountPresenter.swift in Sources */,
+				EA5FDFA62BD69CEE00B736AD /* AdviceDetailPresenter.swift in Sources */,
 				EA20ADA62B8646B400F6D33D /* SettingsPresenter.swift in Sources */,
 				EAC683BB2BCD6B910030FC3A /* AppFileManager.swift in Sources */,
 				EAC683BE2BCD70CD0030FC3A /* AddWeightViewController.swift in Sources */,
@@ -417,6 +459,7 @@
 				EAA8477E2BBDD50F0059E281 /* CreateAccountViewController.swift in Sources */,
 				EA4B311D2BD5B54F00FF1E84 /* AdviceViewController.swift in Sources */,
 				EA4B311A2BD5711B00FF1E84 /* ForgotPasswordModuleBuilder.swift in Sources */,
+				EA5FDFA82BD69CFE00B736AD /* AdviceDetailModuleBuilder.swift in Sources */,
 				EAC683C42BCD738A0030FC3A /* AddWeightModuleBuilder.swift in Sources */,
 				EAA847842BBDD8A70059E281 /* CreateAccountModuleBuilder.swift in Sources */,
 				EAA8D1ED2BB5B8FD0098B015 /* SignInModuleBuilder.swift in Sources */,
@@ -426,6 +469,7 @@
 				EAA8D1F62BB5BDB20098B015 /* SplashModuleBuilder.swift in Sources */,
 				EA2853562BD28FBA00A928F3 /* WeightModel.swift in Sources */,
 				EA20AD832B863A5300F6D33D /* SceneDelegate.swift in Sources */,
+				EA5FDFA02BD6992A00B736AD /* AdviceTableViewCell.swift in Sources */,
 				EA0B322A2BC848E400723D1E /* AuthorizationRequest.swift in Sources */,
 				EA20AD9D2B86414F00F6D33D /* WeightModuleBuilder.swift in Sources */,
 				EAA8D1F02BB5BC470098B015 /* SplashViewController.swift in Sources */,

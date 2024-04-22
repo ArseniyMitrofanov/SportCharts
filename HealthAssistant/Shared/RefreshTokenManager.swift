@@ -34,10 +34,14 @@ final class RefreshTokenManager {
                 if (httpResponse.statusCode >= 200) && (httpResponse.statusCode < 300) && tokens != nil{
                     print("Success")
                     AppFileManager.shared.saveTokens(tokens: tokens!)
-                    complition(true)
+                    DispatchQueue.main.async {
+                        complition(true)
+                    }
                 }else {
                     print("Failure")
-                    complition(false)
+                    DispatchQueue.main.async {
+                        complition(false)
+                    }
                 }
             }
             .resume()

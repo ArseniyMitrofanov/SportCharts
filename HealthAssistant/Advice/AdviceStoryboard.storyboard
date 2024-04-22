@@ -23,15 +23,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="A7F-yQ-rE9">
+                                <rect key="frame" x="16" y="164" width="361" height="634"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Backgroud"/>
                         <constraints>
                             <constraint firstItem="OWN-gm-7ET" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="69q-Lw-iT4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="A7F-yQ-rE9" secondAttribute="bottom" constant="20" id="bd2-XY-486"/>
+                            <constraint firstItem="A7F-yQ-rE9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="chx-ar-9rX"/>
+                            <constraint firstItem="A7F-yQ-rE9" firstAttribute="top" secondItem="OWN-gm-7ET" secondAttribute="bottom" constant="35" id="oxh-CA-MtF"/>
                             <constraint firstItem="OWN-gm-7ET" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="s7d-Ps-n7O"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A7F-yQ-rE9" secondAttribute="trailing" constant="16" id="xSO-mv-dI3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="A7F-yQ-rE9" id="0ib-TN-2ke"/>
                         <outlet property="titleLabel" destination="OWN-gm-7ET" id="L32-Ch-69f"/>
                     </connections>
                 </viewController>
