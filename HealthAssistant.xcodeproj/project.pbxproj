@@ -188,9 +188,7 @@
 				EA20AD822B863A5300F6D33D /* SceneDelegate.swift */,
 				EA2853522BD2882900A928F3 /* Shared */,
 				EAA8D1EE2BB5BC210098B015 /* Splash */,
-				EAA8D1E52BB5B6680098B015 /* SignIn */,
-				EAA8477C2BBDD4D00059E281 /* CreateAccount */,
-				EA4B31122BD56ED800FF1E84 /* ForgotPassword */,
+				EAB05D462BD9954A008B971E /* Authorization */,
 				EA20AD942B863DE500F6D33D /* Tabbar */,
 				EA20ADA02B8645B400F6D33D /* Settings */,
 				EA20AD972B863F5A00F6D33D /* Weight */,
@@ -316,7 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				EAA847832BBDD8A60059E281 /* CreateAccountModuleBuilder.swift */,
-				EA0B32292BC848E400723D1E /* AuthorizationRequest.swift */,
 				EAA847812BBDD5C20059E281 /* CreateAccountPresenter.swift */,
 				EAA8477D2BBDD50F0059E281 /* CreateAccountViewController.swift */,
 				EAA8477F2BBDD57D0059E281 /* CreateAccountStoryboard.storyboard */,
@@ -345,6 +342,17 @@
 				EA20AD8B2B863A5600F6D33D /* LaunchScreen.storyboard */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		EAB05D462BD9954A008B971E /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				EA0B32292BC848E400723D1E /* AuthorizationRequest.swift */,
+				EAA8477C2BBDD4D00059E281 /* CreateAccount */,
+				EAA8D1E52BB5B6680098B015 /* SignIn */,
+				EA4B31122BD56ED800FF1E84 /* ForgotPassword */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		EAC683BC2BCD70AF0030FC3A /* AddWheight */ = {
